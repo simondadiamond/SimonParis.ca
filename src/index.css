@@ -307,8 +307,8 @@ mark {
 /* Premium Buttons */
 .btn-primary {
   @apply inline-flex items-center justify-center rounded-xl px-8 py-4 text-lg font-semibold text-white transition-all;
-  background-color: #13A89E;
-  box-shadow: 0 8px 22px rgba(19, 168, 158, 0.32);
+  background-color: #139E9C;
+  box-shadow: 0 8px 22px rgba(19, 158, 156, 0.32);
   border: none;
   cursor: pointer;
 }
@@ -324,8 +324,8 @@ mark {
 }
 
 .btn-primary:hover {
-  background-color: #18B6B5;
-  box-shadow: 0 0 18px rgba(24, 182, 181, 0.45), 0 12px 30px rgba(19, 168, 158, 0.4);
+  background-color: #17b2b0;
+  box-shadow: 0 0 18px rgba(23, 178, 176, 0.45), 0 12px 30px rgba(19, 158, 156, 0.4);
 }
 
 .btn-primary:focus-visible {
