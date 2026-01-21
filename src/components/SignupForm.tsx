@@ -98,24 +98,24 @@ const getFormHtml = (lang: 'fr' | 'en', sourceUrl: string) => {
   return `
 <div class="sib-form" style="text-align: center; /* background-color: #121c2d; REMOVED to allow CSS to control background */">
   <div id="sib-form-container" class="sib-form-container">
-    <div id="error-message" class="sib-form-message-panel" style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949; max-width:540px; display:none;">
+    <div id="error-message" class="sib-form-message-panel" style="font-size:16px; text-align:left; font-family:Inter, sans-serif; color:#ffb3a0; background-color:#0f0f0f; border-radius:0px; border-color:#ff4f00; max-width:540px; display:none;">
     </div>
-    <div id="success-message" class="sib-form-message-panel" style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#085229; background-color:#e7faf0; border-radius:3px; border-color:#13ce66; max-width:540px; display:none;">
+    <div id="success-message" class="sib-form-message-panel" style="font-size:16px; text-align:left; font-family:Inter, sans-serif; color:#9fe6c1; background-color:#0f0f0f; border-radius:0px; border-color:#2f9d5a; max-width:540px; display:none;">
     </div>
 
-    <div id="sib-container" class="sib-container--large sib-container--vertical" style="text-align:center; background-color:rgba(249,250,251,1); max-width:540px; border-radius:20px; border-width:1px; border-color:#c3bebe; border-style:solid; direction:ltr">
+    <div id="sib-container" class="sib-container--large sib-container--vertical" style="text-align:center; background-color:#0f0f0f; max-width:540px; border-radius:0px; border-width:1px; border-color:#333333; border-style:solid; direction:ltr">
       <form id="sib-form" method="POST"
         action="${formActionUrl}"
         data-type="subscription">
 
         <div style="padding: 16px 0;">
-          <div class="sib-form-block" style="font-size:19px; text-align:center; font-weight:700; font-family:Inter, webFonts; color:#121c2d; background-color:transparent; text-align:center">
+          <div class="sib-form-block" style="font-size:19px; text-align:center; font-weight:700; font-family:Merriweather, serif; color:#EAEAEA; background-color:transparent; text-align:center">
             <h1>${text.headline}</h1>
           </div>
         </div>
 
         <div style="padding: 16px 0 8px 0;">
-          <div class="sib-form-block" style="font-size:19px; text-align:center; font-family:Inter, webFonts; color:#139e9b; background-color:transparent; text-align:center">
+          <div class="sib-form-block" style="font-size:19px; text-align:center; font-family:Roboto Mono, monospace; color:#FF4F00; background-color:transparent; text-align:center">
             <div class="sib-text-form-block">
               <p><strong>${text.tagline}</strong></p>
             </div>
@@ -123,7 +123,7 @@ const getFormHtml = (lang: 'fr' | 'en', sourceUrl: string) => {
         </div>
 
         <div style="padding: 8px 0;">
-          <div class="sib-form-block" style="font-size:16px; text-align:left; font-family:Inter, webFonts; color:#121c2d; background-color:transparent; text-align:left">
+          <div class="sib-form-block" style="font-size:16px; text-align:left; font-family:Inter, webFonts; color:#B4B4B4; background-color:transparent; text-align:left">
             <div class="sib-text-form-block">
               <p>${text.desc}</p>
             </div>
@@ -137,14 +137,14 @@ const getFormHtml = (lang: 'fr' | 'en', sourceUrl: string) => {
           <div class="sib-input sib-form-block">
             <div class="form__entry entry_block">
               <div class="form__label-row ">
-                <label class="entry__label" style="font-weight:700; text-align:left; font-size:16px; font-family:Inter, webFonts; color:#121c2d;" for="EMAIL" data-required="*">
+                <label class="entry__label" style="font-weight:700; text-align:left; font-size:16px; font-family:Inter, webFonts; color:#EAEAEA;" for="EMAIL" data-required="*">
                   ${text.label} *
                 </label>
                 <div class="entry__field">
                   <input class="input" type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="${lang === 'fr' ? 'nom@entreprise.com' : 'name@business.com'}" data-required="true" required />
                 </div>
               </div>
-              <label class="entry__error entry__error--primary" style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;"></label>
+              <label class="entry__error entry__error--primary" style="font-size:16px; text-align:left; font-family:Inter, sans-serif; color:#ffb3a0; background-color:#0f0f0f; border-radius:0px; border-color:#ff4f00;"></label>
             </div>
           </div>
         </div>
@@ -153,19 +153,19 @@ const getFormHtml = (lang: 'fr' | 'en', sourceUrl: string) => {
           <div class="sib-optin sib-form-block" data-required="true">
             <div class="form__entry entry_mcq">
               <div class="form__label-row">
-                <label class="entry__label" style="font-weight:700; text-align:left; font-size:16px; font-family:Inter, webFonts; color:#121c2d;" for="OPT_IN" data-required="*">Opt-in*</label>
+                <label class="entry__label" style="font-weight:700; text-align:left; font-size:16px; font-family:Inter, webFonts; color:#EAEAEA;" for="OPT_IN" data-required="*">Opt-in*</label>
                 <div class="entry__choice">
                   <label>
                     <input type="checkbox" class="input_replaced" value="1" id="OPT_IN" name="OPT_IN" required />
                     <span class="checkbox checkbox_tick_positive"></span>
-                    <span style="font-size:12px; text-align:left; font-family:Helvetica, sans-serif; color:#121c2d;">
+                    <span style="font-size:12px; text-align:left; font-family:Inter, sans-serif; color:#B4B4B4;">
                       <p>${text.optin}</p>
                     </span>
                   </label>
                 </div>
               </div>
-              <label class="entry__error entry__error--primary" style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;"></label>
-              <label class="entry__specification" style="font-size:12px; text-align:left; font-family:Inter, webFonts; color:#111827;">
+              <label class="entry__error entry__error--primary" style="font-size:16px; text-align:left; font-family:Inter, sans-serif; color:#ffb3a0; background-color:#0f0f0f; border-radius:0px; border-color:#ff4f00;"></label>
+              <label class="entry__specification" style="font-size:12px; text-align:left; font-family:Inter, webFonts; color:#B4B4B4;">
                 ${text.unsubscribe}
               </label>
             </div>
@@ -174,7 +174,7 @@ const getFormHtml = (lang: 'fr' | 'en', sourceUrl: string) => {
 
         <div style="padding: 20px 0;">
           <div class="sib-form-block" style="text-align: center">
-            <button class="sib-form-block__button sib-form-block__button-with-loader" style="font-size:16px; text-align:center; font-weight:700; font-family:Inter, webFonts; color:#FFFFFF; background-color:#0473d0; border-radius:10px; border-width:0px;" form="sib-form" type="submit">
+            <button class="sib-form-block__button sib-form-block__button-with-loader" style="font-size:16px; text-align:center; font-weight:700; font-family:Inter, webFonts; color:#0f0f0f; background-color:#FF4F00; border-radius:0px; border-width:1px; border-color:#FF4F00;" form="sib-form" type="submit">
               <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512" style="vertical-align:middle; margin-right:6px; height:14px; width:14px;">
                 <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z"/>
               </svg>
@@ -274,13 +274,13 @@ const SignupForm: React.FC = () => {
           .sib-form { background: transparent !important; }
           #sib-form-container { background: transparent !important; border: 0 !important; box-shadow: none !important; }
           #sib-container {
-            background: #f9fafb !important;
-            border: 1px solid #e5e7eb !important;
-            border-radius: 16px !important;
+            background: #0f0f0f !important;
+            border: 1px solid #333333 !important;
+            border-radius: 0px !important;
             padding: 20px !important; /* Mobile padding */
             max-width: 600px !important; 
             margin: 0 auto !important;
-            box-shadow: 0 16px 48px rgba(18, 28, 45, 0.12) !important;
+            box-shadow: none !important;
           }
 
           /* Desktop Padding */
@@ -295,6 +295,8 @@ const SignupForm: React.FC = () => {
             font-size: 28px !important;
             line-height: 1.2 !important;
             margin-bottom: 0px !important; 
+            color: #EAEAEA !important;
+            font-family: 'Merriweather', serif !important;
           }
           
           /* Remove the "Vous pouvez vous désabonner..." text */
@@ -322,12 +324,15 @@ const SignupForm: React.FC = () => {
           /* Ensure input fields have better padding/border-radius */
           #sib-container .input {
             padding: 12px 16px !important;
-            border-radius: 8px !important;
+            border-radius: 0px !important;
+            border: 1px solid #333333 !important;
+            background: #0f0f0f !important;
+            color: #EAEAEA !important;
           }
           /* Add a subtle focus style */
           #sib-container .input:focus {
-             border-color: #2280FF !important; /* Blue accent on focus */
-             box-shadow: 0 0 0 3px rgba(34, 128, 255, 0.2) !important;
+             border-color: #FF4F00 !important; /* Accent on focus */
+             box-shadow: none !important;
              outline: none !important;
           }
 
@@ -347,7 +352,7 @@ const SignupForm: React.FC = () => {
             /* Set font and color for a clean inline look */
             font-size: 14px !important;
             font-weight: 500 !important;
-            color: #ef4444 !important; /* Tailwind's red-500 */
+            color: #ffb3a0 !important;
             text-align: left !important;
             
             /* Reduce unnecessary top/bottom padding/margin on the error elements themselves */
@@ -362,47 +367,45 @@ const SignupForm: React.FC = () => {
             max-width: 600px !important;
             margin: 0 auto 16px !important; /* Restore a little space above form */
             padding: 12px 16px !important; /* Add back padding to the message panel container */
-            border-radius: 8px !important;
+            border-radius: 0px !important;
           }
           
           /* Error Message Panel */
           #error-message {
-            border: 1px solid #ef4444 !important;
-            background-color: #fef2f2 !important; /* Light red background */
-            color: #b91c1c !important; /* Darker red text */
+            border: 1px solid #ff4f00 !important;
+            background-color: #0f0f0f !important;
+            color: #ffb3a0 !important;
           }
           
           /* Success Message Panel (Added for visual consistency) */
           #success-message {
-            border: 1px solid #13ce66 !important;
-            background-color: #e7faf0 !important; /* Light green background */
-            color: #085229 !important; /* Darker green text */
+            border: 1px solid #2f9d5a !important;
+            background-color: #0f0f0f !important;
+            color: #9fe6c1 !important;
           }
 
 
           /* Button Styling */
           .sib-form-block__button {
-            /* Custom Gradient */
-            background: linear-gradient(to right, #2280FF, #139E9C) !important;
+            background: #FF4F00 !important;
             /* Enhanced Aesthetics */
             width: 100% !important; /* Make it full width */
             padding: 14px 24px !important;
             font-size: 18px !important;
-            border: none !important;
-            border-radius: 10px !important;
-            transition: opacity 0.2s, transform 0.1s, box-shadow 0.2s !important;
-            box-shadow: 0 4px 10px rgba(34, 128, 255, 0.2) !important;
+            border: 1px solid #FF4F00 !important;
+            border-radius: 0px !important;
+            transition: opacity 0.2s !important;
+            box-shadow: none !important;
+            color: #0f0f0f !important;
           }
           
           .sib-form-block__button:hover {
-             opacity: 0.95 !important;
-             transform: translateY(-1px) !important;
-             box-shadow: 0 6px 15px rgba(34, 128, 255, 0.4) !important;
+             opacity: 0.9 !important;
           }
 
           .sib-form-block__button:active {
-             transform: translateY(1px) !important;
-             box-shadow: 0 2px 5px rgba(34, 128, 255, 0.1) !important;
+             transform: none !important;
+             box-shadow: none !important;
           }
         `}</style>
       </div>

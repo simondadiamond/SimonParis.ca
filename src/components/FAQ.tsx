@@ -11,11 +11,8 @@ interface ButtonProps {
 
 const Button: React.FC<ButtonProps> = ({ href, variant = 'teal', children }) => {
   const baseClasses =
-    'inline-flex items-center justify-center rounded-xl px-6 py-3 text-sm font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2';
-  const variantClasses =
-    variant === 'teal'
-      ? 'bg-[#139E9C] text-white shadow-lg shadow-[#139E9C]/25 transition-colors duration-200 hover:bg-[#0EAAA9] focus-visible:ring-[#139E9C] focus-visible:ring-offset-white'
-      : '';
+    'btn-primary inline-flex items-center justify-center px-6 py-3 text-sm font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2';
+  const variantClasses = variant === 'teal' ? '' : '';
 
   return (
     <a href={href} className={`${baseClasses} ${variantClasses}`}>
@@ -88,14 +85,14 @@ const FAQ: React.FC = () => {
   );
 
   return (
-    <section ref={sectionRef} className="relative overflow-hidden bg-white py-16 lg:py-20">
+    <section ref={sectionRef} className="relative overflow-hidden bg-[#0f0f0f] py-16 lg:py-20">
       <div className="relative z-10 mx-auto max-w-[720px] px-4 sm:px-6">
         <div
           className={`mb-12 text-center transition-all duration-700 ${
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
           }`}
         >
-          <h2 className="text-3xl font-semibold text-gray-900 md:text-4xl">{t('faq.title')}</h2>
+          <h2 className="text-3xl font-semibold text-[#EAEAEA] md:text-4xl">{t('faq.title')}</h2>
         </div>
 
         <div
@@ -109,22 +106,22 @@ const FAQ: React.FC = () => {
             return (
               <div
                 key={item.question}
-                className="overflow-hidden border-b border-gray-200/80 last:border-b-0"
+                className="overflow-hidden border-b border-[#333333] last:border-b-0"
               >
                 <button
                   type="button"
-                  className="flex w-full items-center justify-between px-6 py-4 text-left transition-colors duration-200 hover:text-gray-900 focus-visible:text-gray-900 md:px-8 md:py-5"
+                  className="flex w-full items-center justify-between px-6 py-4 text-left transition-colors duration-200 hover:text-[#FF4F00] focus-visible:text-[#FF4F00] md:px-8 md:py-5"
                   onClick={() => setOpenIndex(isOpen ? null : index)}
                   aria-expanded={isOpen}
                   aria-controls={`faq-panel-${index}`}
                 >
-                  <span className="pr-6 text-base font-semibold text-gray-900 md:text-lg">
+                  <span className="pr-6 text-base font-semibold text-[#EAEAEA] md:text-lg">
                     {item.question}
                   </span>
                   {isOpen ? (
-                    <ChevronUp className="h-6 w-6 text-[#2280FF]" />
+                    <ChevronUp className="h-6 w-6 text-[#FF4F00]" />
                   ) : (
-                    <ChevronDown className="h-6 w-6 text-[#2280FF]" />
+                    <ChevronDown className="h-6 w-6 text-[#FF4F00]" />
                   )}
                 </button>
 
@@ -135,7 +132,7 @@ const FAQ: React.FC = () => {
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <div className="px-6 pb-4 text-base leading-7 text-gray-600 md:px-8 md:pb-5 md:text-lg">
+                    <div className="px-6 pb-4 text-base leading-7 text-[#B4B4B4] md:px-8 md:pb-5 md:text-lg">
                       <div className="space-y-3">
                         {item.answer.map((paragraph, paragraphIndex) => (
                           <p key={paragraphIndex}>{paragraph}</p>
@@ -154,7 +151,7 @@ const FAQ: React.FC = () => {
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
           }`}
         >
-          <p className="max-w-md text-center text-sm leading-6 text-gray-600 opacity-90">
+          <p className="max-w-md text-center text-sm leading-6 text-[#B4B4B4] opacity-90">
             {t('faq.cta.text')}
           </p>
           <div className="mt-4">
