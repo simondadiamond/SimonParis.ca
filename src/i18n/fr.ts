@@ -237,9 +237,9 @@ const fr: TranslationKeys = {
   },
   finalcta: {
     eyebrow: 'SYSTÈME EN PRODUCTION',
-    headline: 'Écrit par des Robots',
+    headline: 'Analyse par Simon Paris',
     subtext:
-      "Un condensé hebdomadaire sur les Opérations IA et l'architecture technique. Recherché par des agents, rédigé par des LLM, et ingénieré par Simon Paris.",
+      "Cartographie stratégique des hypothèses pour l’entreprise. Amplifiée par des agents, vérifiée par un bâtisseur humain.",
     cta: "S'abonner",
     href: '/fr/newsletter'
   },

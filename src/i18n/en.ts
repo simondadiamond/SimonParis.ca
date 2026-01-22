@@ -234,9 +234,9 @@ export const en = {
   },
   finalcta: {
     eyebrow: 'PRODUCTION SYSTEM',
-    headline: 'Written By Robots',
+    headline: 'Analysis by Simon Paris',
     subtext:
-      'A weekly digest on AI Operations and technical architecture. Researched by agents, drafted by LLMs, and engineered by Simon Paris.',
+      'Strategic assumption mapping for the enterprise. Amplified by agents, verified by a human builder.',
     cta: 'Subscribe for Insights',
     href: '/en/newsletter'
   },

@@ -27,7 +27,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative isolate flex min-h-screen items-center justify-center overflow-hidden bg-[#0f0f0f] text-[#EAEAEA]"
+      className="lab-grid relative isolate flex min-h-screen items-center justify-center overflow-hidden text-[#EAEAEA]"
     >
 
       <div className="relative z-10 mx-auto w-full max-w-[60rem] px-4 py-24 text-center sm:px-6 lg:px-8 lg:py-32">

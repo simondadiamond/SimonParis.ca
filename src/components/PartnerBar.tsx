@@ -12,11 +12,11 @@ const PartnerBar: React.FC = () => {
         <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-[#B4B4B4] font-mono">
           {t.partners.title}
         </p>
-        <div className="mt-6 flex flex-wrap justify-center gap-3 sm:gap-4">
+        <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-7">
           {stack.map((item) => (
             <span
               key={item}
-              className="border border-[#333333] px-4 py-2 text-[12px] font-semibold uppercase tracking-[0.14em] text-[#EAEAEA] font-mono"
+              className="flex h-10 items-center justify-center border border-[#333333] px-3 text-[12px] font-semibold uppercase tracking-[0.14em] text-[#EAEAEA] font-mono"
             >
               {item}
             </span>

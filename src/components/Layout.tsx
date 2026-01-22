@@ -161,7 +161,7 @@ export const Footer: React.FC<{ langToggle?: { fr: string; en: string } }> = ({
   const footerLabel = nextLang === 'fr' ? 'Switch language to French' : 'Switch language to English';
 
   return (
-    <footer className="border-t border-[#333333] bg-[#0f0f0f] text-[#EAEAEA]">
+    <footer className="lab-grid border-t border-[#333333] text-[#EAEAEA]">
       <div className="mx-auto max-w-6xl px-6 py-10">
         <div className="flex flex-col items-center gap-3 text-center sm:flex-row sm:justify-between sm:text-left">
           <span className="text-sm text-[#B4B4B4]">© 2025 Simon Paris</span>
