@@ -8,12 +8,12 @@ export const en = {
     cta: 'Diagnostic Éclair'
   },
   hero: {
-    headline: 'AI Automation & Operations Architect',
+    headline: 'The Assumption Mapper',
     subtitle:
-      'Designing resilient workflows and internal tooling. I bridge the gap between advanced orchestration (n8n, Make) and practical adoption to build systems that empower teams to work smarter.',
+      'I stress-test AI narratives. Weekly analysis on what’s broken in enterprise AI.',
     cta: {
-      label: 'View Projects & Case Studies',
-      href: '#projects'
+      label: 'Subscribe for Maps',
+      href: '/en/newsletter'
     }
   },
   sections: {
@@ -234,9 +234,9 @@ export const en = {
   },
   finalcta: {
     eyebrow: 'PRODUCTION SYSTEM',
-    headline: 'Written By Robots',
+    headline: 'Analysis by Simon Paris',
     subtext:
-      'A weekly digest on AI Operations and technical architecture. Researched by agents, drafted by LLMs, and engineered by Simon Paris.',
+      'Strategic assumption mapping for the enterprise. Amplified by agents, verified by a human builder.',
     cta: 'Subscribe for Insights',
     href: '/en/newsletter'
   },

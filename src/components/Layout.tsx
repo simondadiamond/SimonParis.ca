@@ -28,7 +28,7 @@ export const Header: React.FC<{
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const resolvedTextClass = 'text-white';
+  const resolvedTextClass = 'text-[#EAEAEA]';
   const textClass = resolvedTextClass;
   const LanguageToggle = ({ tone = 'desktop' }: { tone?: 'desktop' | 'mobile' }) => {
     const toggleLanguage = () => {
@@ -42,25 +42,25 @@ export const Header: React.FC<{
     const isLight = textClass.includes('#121C2D');
     const isMobile = tone === 'mobile';
     const activeClass = isMobile
-      ? 'text-white'
+      ? 'text-[#EAEAEA]'
       : isLight
       ? 'text-[#121C2D]'
-      : 'text-white';
+      : 'text-[#EAEAEA]';
     const inactiveClass = isMobile
-      ? 'text-white/55'
+      ? 'text-[#B4B4B4]'
       : isLight
       ? 'text-[#121C2D]/55'
-      : 'text-white/55';
+      : 'text-[#B4B4B4]';
     const dividerClass = isMobile
-      ? 'text-white/30'
+      ? 'text-[#333333]'
       : isLight
       ? 'text-[#121C2D]/35'
-      : 'text-white/35';
+      : 'text-[#333333]';
 
     const wrapperClass =
       tone === 'desktop'
-        ? 'flex items-center text-[0.7rem] font-semibold uppercase tracking-[0.25em]'
-        : 'flex items-center text-[0.7rem] font-semibold uppercase tracking-[0.25em]';
+        ? 'flex items-center text-[0.7rem] font-semibold uppercase tracking-[0.25em] font-mono'
+        : 'flex items-center text-[0.7rem] font-semibold uppercase tracking-[0.25em] font-mono';
 
     const nextLang = lang === 'fr' ? 'en' : 'fr';
     const label = nextLang === 'fr' ? 'Switch language to French' : 'Switch language to English';
@@ -69,7 +69,7 @@ export const Header: React.FC<{
       <button
         type="button"
         onClick={toggleLanguage}
-        className={`${wrapperClass} transition-colors hover:opacity-90 focus:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white`}
+        className={`${wrapperClass} transition-colors hover:text-[#FF4F00] focus:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF4F00]`}
         aria-label={label}
       >
         <span className={lang === 'fr' ? activeClass : inactiveClass}>FR</span>
@@ -80,12 +80,12 @@ export const Header: React.FC<{
   };
 
   const headerBackgroundClass = forceDarkBackground
-    ? 'bg-[#0B1320]/95 backdrop-blur-lg'
+    ? 'bg-[#0f0f0f] border-b border-[#333333]'
     : isPrivacyPage
-    ? 'bg-[#0B1320]/95 backdrop-blur-lg shadow-sm'
+    ? 'bg-[#0f0f0f] border-b border-[#333333]'
     : isScrolled
-    ? 'bg-[#0B1320]/90 backdrop-blur-lg'
-    : 'bg-transparent';
+    ? 'bg-[#0f0f0f] border-b border-[#333333]'
+    : 'bg-[#0f0f0f] border-b border-[#333333]';
 
   const headerClassName = `fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${headerBackgroundClass}`;
 
@@ -123,11 +123,11 @@ export const Header: React.FC<{
         }`}
       >
         <div
-          className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+          className="absolute inset-0 bg-[#0f0f0f]"
           onClick={() => setIsMobileMenuOpen(false)}
         />
         <div
-          className={`absolute top-0 right-0 h-full w-72 bg-[#0B1320] text-white shadow-2xl transition-transform duration-300 ${
+          className={`absolute top-0 right-0 h-full w-72 border-l border-[#333333] bg-[#0f0f0f] text-[#EAEAEA] transition-transform duration-300 ${
             isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
         >
@@ -161,15 +161,15 @@ export const Footer: React.FC<{ langToggle?: { fr: string; en: string } }> = ({
   const footerLabel = nextLang === 'fr' ? 'Switch language to French' : 'Switch language to English';
 
   return (
-    <footer className="border-t border-white/10 bg-gradient-to-r from-[#0B1320] via-[#0E182B] to-[#0B1320] text-white">
+    <footer className="lab-grid border-t border-[#333333] text-[#EAEAEA]">
       <div className="mx-auto max-w-6xl px-6 py-10">
         <div className="flex flex-col items-center gap-3 text-center sm:flex-row sm:justify-between sm:text-left">
-          <span className="text-sm text-white/75">© 2025 Simon Paris</span>
+          <span className="text-sm text-[#B4B4B4]">© 2025 Simon Paris</span>
 
           <div className="flex flex-col items-center gap-3 sm:flex-row sm:gap-6">
             <a
               href={lang === 'fr' ? '/fr/politique-confidentialite' : '/privacy'}
-              className="text-sm text-white/70 transition hover:text-white"
+              className="text-sm text-[#B4B4B4] transition hover:text-[#FF4F00]"
             >
               {t.footer.links.privacy}
             </a>
@@ -177,12 +177,12 @@ export const Footer: React.FC<{ langToggle?: { fr: string; en: string } }> = ({
             <button
               type="button"
               onClick={toggleFooterLanguage}
-              className="flex items-center text-sm font-semibold tracking-[0.25em] text-white/70 transition hover:text-white focus:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              className="flex items-center text-sm font-semibold tracking-[0.25em] text-[#B4B4B4] transition hover:text-[#FF4F00] focus:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF4F00] font-mono"
               aria-label={footerLabel}
             >
-              <span className={lang === 'fr' ? 'text-white' : 'text-white/60'}>FR</span>
-              <span className="mx-2 text-white/35">|</span>
-              <span className={lang === 'en' ? 'text-white' : 'text-white/60'}>EN</span>
+              <span className={lang === 'fr' ? 'text-[#EAEAEA]' : 'text-[#B4B4B4]'}>FR</span>
+              <span className="mx-2 text-[#333333]">|</span>
+              <span className={lang === 'en' ? 'text-[#EAEAEA]' : 'text-[#B4B4B4]'}>EN</span>
             </button>
           </div>
         </div>
@@ -190,4 +190,3 @@ export const Footer: React.FC<{ langToggle?: { fr: string; en: string } }> = ({
     </footer>
   );
 };
-

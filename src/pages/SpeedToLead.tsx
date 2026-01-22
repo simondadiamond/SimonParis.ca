@@ -167,22 +167,22 @@ const content = {
 const LandingFAQ: React.FC<{ title: string; intro: string; items: { q: string; a: string }[] }> = ({ title, intro, items }) => {
   const [open, setOpen] = useState<number | null>(null);
   return (
-    <section className="py-16" style={{ backgroundColor: 'var(--off-white)' }}>
+    <section className="py-16 bg-[#0f0f0f]">
       <div className="max-w-4xl mx-auto px-6">
         <h2 className="text-3xl font-bold text-center mb-4">{title}</h2>
-        <p className="text-center text-gray-700 mb-8">{intro}</p>
+        <p className="text-center text-[#B4B4B4] mb-8">{intro}</p>
         <div className="space-y-3">
           {items.map((qa, i) => (
             <div key={i} className="card-light overflow-hidden">
               <button
-                className="w-full flex justify-between items-center px-6 py-3 md:py-4 text-left hover:bg-white/5 transition-colors"
+                className="w-full flex justify-between items-center px-6 py-3 md:py-4 text-left hover:border-[#FF4F00] transition-colors"
                 onClick={() => setOpen(open === i ? null : i)}
               >
-                <span className="text-lg font-semibold text-gray-900">{qa.q}</span>
+                <span className="text-lg font-semibold text-[#EAEAEA]">{qa.q}</span>
                 {open === i ? (
-                  <ChevronUp className="w-6 h-6 text-[#2280FF]" />
+                  <ChevronUp className="w-6 h-6 text-[#FF4F00]" />
                 ) : (
-                  <ChevronDown className="w-6 h-6 text-[#2280FF]" />
+                  <ChevronDown className="w-6 h-6 text-[#FF4F00]" />
                 )}
               </button>
               <div
@@ -190,7 +190,7 @@ const LandingFAQ: React.FC<{ title: string; intro: string; items: { q: string; a
                   open === i ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
                 }`}
               >
-                <p className="text-gray-700">{qa.a}</p>
+                <p className="text-[#B4B4B4]">{qa.a}</p>
               </div>
             </div>
           ))}
@@ -210,25 +210,18 @@ const Landing: React.FC<{ lang: Lang }> = ({ lang }) => {
   const painIcons = [CalendarX, Clock, Shield];
 
   return (
-    <div className="font-sans">
+    <div className="font-sans bg-[#0f0f0f] text-[#EAEAEA]">
       <Header langToggle={{ fr: frHref, en: enHref }} ctaHref="#demo" ctaLabel={t.navDemo} />
 
       <main>
         <section
-          className="relative flex items-center bg-[#121c2d] text-white pt-24 pb-16 overflow-hidden"
+          className="relative flex items-center bg-[#0f0f0f] text-[#EAEAEA] pt-24 pb-16 overflow-hidden"
           style={{ minHeight: '75vh' }}
         >
-          <div className="absolute inset-0">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-float" />
-            <div
-              className="absolute bottom-20 right-10 w-96 h-96 bg-teal-400/10 rounded-full blur-3xl animate-float"
-              style={{ animationDelay: '2s' }}
-            />
-          </div>
           <div className="relative z-10 max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="section-heading text-white mb-4">{t.hero.headline}</h1>
-              <p className="mb-6 max-w-md">{t.hero.sub}</p>
+              <h1 className="section-heading text-[#EAEAEA] mb-4">{t.hero.headline}</h1>
+              <p className="mb-6 max-w-md text-[#B4B4B4]">{t.hero.sub}</p>
               <a href="#demo" data-action="demo" className="btn-primary text-lg px-8 py-4">
                 {t.hero.cta}
               </a>
@@ -236,24 +229,24 @@ const Landing: React.FC<{ lang: Lang }> = ({ lang }) => {
                 {t.hero.bullets.map((b, i) => {
                   const Icon = bulletIcons[i];
                   return (
-                    <li key={i} className="flex items-center text-sm">
-                      <Icon className="w-4 h-4 text-[#2280FF]" />
+                    <li key={i} className="flex items-center text-sm text-[#B4B4B4]">
+                      <Icon className="w-4 h-4 text-[#FF4F00]" />
                       <span className="ml-2">{b}</span>
                     </li>
                   );
                 })}
               </ul>
               <div className="flex items-center space-x-3 mt-6">
-                <span className="flex items-center bg-white/10 rounded-full px-3 py-1 text-xs font-medium">
-                  <ShieldCheck className="w-4 h-4 mr-1" />
+                <span className="flex items-center border border-[#333333] px-3 py-1 text-xs font-medium font-mono uppercase tracking-[0.12em]">
+                  <ShieldCheck className="w-4 h-4 mr-1 text-[#FF4F00]" />
                   {lang === 'fr' ? 'Loi 96' : 'Bill 96'}
                 </span>
-                <span className="flex items-center bg-white/10 rounded-full px-3 py-1 text-xs font-medium">
-                  <ShieldCheck className="w-4 h-4 mr-1" />
+                <span className="flex items-center border border-[#333333] px-3 py-1 text-xs font-medium font-mono uppercase tracking-[0.12em]">
+                  <ShieldCheck className="w-4 h-4 mr-1 text-[#FF4F00]" />
                   {lang === 'fr' ? 'Loi 25' : 'Law 25'}
                 </span>
               </div>
-              <p className="mt-2 text-xs opacity-70">{t.hero.footnote}</p>
+              <p className="mt-2 text-xs text-[#B4B4B4]">{t.hero.footnote}</p>
             </div>
             <div className="mt-10 md:mt-0">
               <video
@@ -262,7 +255,7 @@ const Landing: React.FC<{ lang: Lang }> = ({ lang }) => {
                 muted
                 loop
                 playsInline
-                className="w-full aspect-video rounded-xl bg-gray-200"
+                className="w-full aspect-video bg-[#1a1a1a] border border-[#333333]"
               />
             </div>
           </div>
@@ -270,17 +263,17 @@ const Landing: React.FC<{ lang: Lang }> = ({ lang }) => {
 
         <PartnerBar />
 
-        <section className="py-16" style={{ backgroundColor: 'var(--off-white)' }}>
+        <section className="py-16 bg-[#0f0f0f]">
           <div className="max-w-6xl mx-auto px-6">
             <h2 className="text-3xl font-bold mb-6">{t.whyTitle}</h2>
-            <p className="mb-10 text-gray-700" dangerouslySetInnerHTML={{ __html: t.whyCopy }} />
+            <p className="mb-10 text-[#B4B4B4]" dangerouslySetInnerHTML={{ __html: t.whyCopy }} />
             <div className="grid md:grid-cols-3 gap-6">
               {t.pain.map((item, i) => {
                 const Icon = painIcons[i];
                 return (
                   <div key={i} className="card-light p-6 flex items-start space-x-3">
-                    <Icon className="w-6 h-6 text-[#2280FF] flex-shrink-0" />
-                    <p>
+                    <Icon className="w-6 h-6 text-[#FF4F00] flex-shrink-0" />
+                    <p className="text-[#B4B4B4]">
                       {item.pain} → <strong>{item.outcome}</strong>
                     </p>
                   </div>
@@ -290,10 +283,10 @@ const Landing: React.FC<{ lang: Lang }> = ({ lang }) => {
           </div>
         </section>
 
-        <section className="py-16" style={{ backgroundColor: 'var(--off-white)' }}>
+        <section className="py-16 bg-[#0f0f0f]">
           <div className="max-w-6xl mx-auto px-6">
             <h2 className="text-3xl font-bold mb-6">{t.howTitle}</h2>
-            <p className="mb-10 text-gray-700" dangerouslySetInnerHTML={{ __html: t.howCopy }} />
+            <p className="mb-10 text-[#B4B4B4]" dangerouslySetInnerHTML={{ __html: t.howCopy }} />
             <div className="mb-10">
               <video
                 src="https://www.w3schools.com/html/mov_bbb.mp4"
@@ -301,7 +294,7 @@ const Landing: React.FC<{ lang: Lang }> = ({ lang }) => {
                 muted
                 loop
                 playsInline
-                className="w-full aspect-video rounded-xl bg-gray-200"
+                className="w-full aspect-video bg-[#1a1a1a] border border-[#333333]"
               />
             </div>
             <div className="grid md:grid-cols-3 gap-6">
@@ -309,17 +302,17 @@ const Landing: React.FC<{ lang: Lang }> = ({ lang }) => {
                 const Icon = howIcons[i];
                 return (
                   <div key={i} className="card-light p-6 flex items-start space-x-3">
-                    <div className="w-10 h-10 rounded-full bg-[#2280FF]/10 flex items-center justify-center flex-shrink-0">
-                      <Icon className="w-5 h-5 text-[#2280FF]" />
+                    <div className="w-10 h-10 border border-[#333333] flex items-center justify-center flex-shrink-0">
+                      <Icon className="w-5 h-5 text-[#FF4F00]" />
                     </div>
-                    <p className="font-semibold">{step}</p>
+                    <p className="font-semibold text-[#EAEAEA]">{step}</p>
                   </div>
                 );
               })}
             </div>
             <div className="mt-10">
               <h3 className="font-semibold mb-3">{lang === 'fr' ? 'Timing intelligent' : 'Smart timing'}</h3>
-              <div className="space-y-2 text-sm">
+              <div className="space-y-2 text-sm text-[#B4B4B4]">
                 <p>
                   {lang === 'fr'
                     ? `Heures d’ouverture : « Bien reçu — je termine quelque chose, je vous rappelle dans ~${leadResponseConfig.response_delay_minutes} minutes. »`
@@ -330,14 +323,14 @@ const Landing: React.FC<{ lang: Lang }> = ({ lang }) => {
                     <>
                       Hors heures : « Merci pour votre message — nous vous rappelons demain 8\u00a0h\u00a030–9\u00a0h. Vous préférez réserver maintenant\u00a0? »
                       {leadResponseConfig.has_online_booking && (
-                        <a href="#" className="text-[#2280FF] underline ml-1">Lien de réservation</a>
+                        <a href="#" className="text-[#FF4F00] underline ml-1">Lien de réservation</a>
                       )}
                     </>
                   ) : (
                     <>
                       After hours: “Thanks for your message — we’ll call tomorrow 8:30–9:00. Prefer to book now?”
                       {leadResponseConfig.has_online_booking && (
-                        <a href="#" className="text-[#2280FF] underline ml-1">Booking link</a>
+                        <a href="#" className="text-[#FF4F00] underline ml-1">Booking link</a>
                       )}
                     </>
                   )}
@@ -347,39 +340,39 @@ const Landing: React.FC<{ lang: Lang }> = ({ lang }) => {
           </div>
         </section>
 
-        <section className="py-16" style={{ backgroundColor: 'var(--off-white)' }}>
+        <section className="py-16 bg-[#0f0f0f]">
           <div className="max-w-6xl mx-auto px-6">
             <h2 className="text-3xl font-bold mb-6">{t.proofTitle}</h2>
-            <p className="mb-10 text-gray-700" dangerouslySetInnerHTML={{ __html: t.proofCopy }} />
+            <p className="mb-10 text-[#B4B4B4]" dangerouslySetInnerHTML={{ __html: t.proofCopy }} />
             <div className="grid md:grid-cols-3 gap-6 mb-10">
               {t.stats.map((s, i) => {
                 const Icon = statIcons[i];
                 return (
                   <div key={i} className="card-light p-6 flex items-center space-x-3">
-                    <Icon className="w-5 h-5 text-[#2280FF]" />
-                    <p className="font-medium">{s}</p>
+                    <Icon className="w-5 h-5 text-[#FF4F00]" />
+                    <p className="font-medium text-[#B4B4B4]">{s}</p>
                   </div>
                 );
               })}
             </div>
             <div className="card-light p-8">
               <h3 className="font-semibold mb-3">{t.case.title}</h3>
-              <p className="text-sm mb-1">{t.case.before}</p>
-              <p className="text-sm mb-1">{t.case.after}</p>
-              <p className="text-sm mb-1">{t.case.impact}</p>
-              <p className="text-xs text-gray-500 mb-4">{t.case.disclaimer}</p>
-              <p className="text-sm italic text-gray-600">{t.case.quote}</p>
+              <p className="text-sm mb-1 text-[#B4B4B4]">{t.case.before}</p>
+              <p className="text-sm mb-1 text-[#B4B4B4]">{t.case.after}</p>
+              <p className="text-sm mb-1 text-[#B4B4B4]">{t.case.impact}</p>
+              <p className="text-xs text-[#777777] mb-4">{t.case.disclaimer}</p>
+              <p className="text-sm italic text-[#B4B4B4]">{t.case.quote}</p>
             </div>
           </div>
         </section>
 
-        <section className="py-16" style={{ backgroundColor: 'var(--off-white)' }}>
+        <section className="py-16 bg-[#0f0f0f]">
           <div className="max-w-3xl mx-auto px-6">
             <div className="card-light p-8 relative" data-spots="7">
-              <span className="absolute top-4 left-4 bg-[#2280FF] text-white text-xs font-semibold px-3 py-1 rounded-full">
+              <span className="absolute top-4 left-4 border border-[#333333] text-[#FF4F00] text-xs font-semibold px-3 py-1 font-mono uppercase tracking-[0.12em]">
                 {t.founders.badge}
               </span>
-              <p className="mb-6 text-gray-700" dangerouslySetInnerHTML={{ __html: t.founders.copy }} />
+              <p className="mb-6 text-[#B4B4B4]" dangerouslySetInnerHTML={{ __html: t.founders.copy }} />
               <div className="flex justify-center space-x-4">
                 <a
                   href="https://buy.stripe.com/FOUNDERS99"
@@ -398,10 +391,10 @@ const Landing: React.FC<{ lang: Lang }> = ({ lang }) => {
 
         <LandingFAQ title="FAQ" intro={t.faqIntro} items={t.faq} />
 
-        <section id="demo" className="bg-[#121c2d] text-white py-20 text-center">
+        <section id="demo" className="bg-[#0f0f0f] text-[#EAEAEA] py-20 text-center">
           <div className="max-w-6xl mx-auto px-6">
             <h2 className="text-3xl font-bold mb-4">{t.final.title}</h2>
-            <p className="mb-8" dangerouslySetInnerHTML={{ __html: t.final.copy }} />
+            <p className="mb-8 text-[#B4B4B4]" dangerouslySetInnerHTML={{ __html: t.final.copy }} />
             <div className="flex justify-center space-x-4 mb-8">
               <a href="#demo" data-action="demo" className="btn-primary">
                 {t.final.primary}
@@ -414,17 +407,17 @@ const Landing: React.FC<{ lang: Lang }> = ({ lang }) => {
                 {t.final.secondary}
               </a>
             </div>
-            <div className="flex justify-center space-x-6 mb-8 text-sm">
+            <div className="flex justify-center space-x-6 mb-8 text-sm text-[#B4B4B4] font-mono uppercase tracking-[0.12em]">
               <div className="flex items-center">
-                <ShieldCheck className="w-5 h-5 mr-1" />
+                <ShieldCheck className="w-5 h-5 mr-1 text-[#FF4F00]" />
                 {lang === 'fr' ? 'Loi 96' : 'Bill 96'}
               </div>
               <div className="flex items-center">
-                <ShieldCheck className="w-5 h-5 mr-1" />
+                <ShieldCheck className="w-5 h-5 mr-1 text-[#FF4F00]" />
                 {lang === 'fr' ? 'Loi 25' : 'Law 25'}
               </div>
               <div className="flex items-center">
-                <Lock className="w-5 h-5 mr-1" />
+                <Lock className="w-5 h-5 mr-1 text-[#FF4F00]" />
                 {lang === 'fr' ? 'Paiement s\u00e9curis\u00e9' : 'Secure payment'}
               </div>
             </div>
@@ -437,21 +430,21 @@ const Landing: React.FC<{ lang: Lang }> = ({ lang }) => {
                 type="text"
                 name="name"
                 placeholder={lang === 'fr' ? 'Nom' : 'Name'}
-                className="w-full p-2 text-[#121c2d] rounded"
+                className="w-full p-2 border border-[#333333] bg-[#0f0f0f] text-[#EAEAEA]"
                 required
               />
               <input
                 type="email"
                 name="email"
                 placeholder={lang === 'fr' ? 'Courriel' : 'Email'}
-                className="w-full p-2 text-[#121c2d] rounded"
+                className="w-full p-2 border border-[#333333] bg-[#0f0f0f] text-[#EAEAEA]"
                 required
               />
               <input
                 type="text"
                 name="clinic"
                 placeholder={lang === 'fr' ? 'Type de clinique' : 'Clinic type'}
-                className="w-full p-2 text-[#121c2d] rounded"
+                className="w-full p-2 border border-[#333333] bg-[#0f0f0f] text-[#EAEAEA]"
                 required
               />
               <label className="flex items-start text-sm">

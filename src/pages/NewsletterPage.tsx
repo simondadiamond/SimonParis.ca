@@ -68,7 +68,7 @@ const NewsletterPage: React.FC<NewsletterPageProps> = ({ lang }) => {
   }, [lang, copy.meta.description, copy.meta.title]);
 
   return (
-    <div className="flex min-h-screen flex-col bg-[#F4F6FA] text-[var(--text-primary)]">
+    <div className="flex min-h-screen flex-col bg-[#0f0f0f] text-[#EAEAEA]">
       <Header
         langToggle={{ fr: translations.fr.newsletter.meta.canonical, en: translations.en.newsletter.meta.canonical }}
         forceDarkBackground

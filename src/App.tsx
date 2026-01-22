@@ -10,7 +10,7 @@ import PartnerBar from './components/PartnerBar';
 import FinalCTA from './components/FinalCTA';
 import { useProjects } from './hooks/useProjects';
 
-const gradientTopLeft = 'linear-gradient(to top left, #ebf3fb, #effbfa 55%, #fff)';
+const gradientTopLeft = '#0f0f0f';
 
 const Link: React.FC<{ href: string; children: React.ReactNode }> = ({ href, children }) => (
   <a href={href} className="block">
@@ -27,22 +27,16 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative isolate flex min-h-screen items-center justify-center overflow-hidden bg-[#0B1320] text-white"
+      className="lab-grid relative isolate flex min-h-screen items-center justify-center overflow-hidden text-[#EAEAEA]"
     >
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute inset-0 bg-[radial-gradient(120%_120%_at_0%_0%,rgba(34,128,255,0.2),rgba(11,19,32,0)_60%),radial-gradient(120%_120%_at_85%_15%,rgba(19,158,156,0.25),rgba(11,19,32,0)_65%)] opacity-90" />
-        <div className="absolute inset-0 bg-[linear-gradient(140deg,rgba(255,255,255,0.08),transparent_50%)] mix-blend-screen" />
-        <div className="absolute -left-24 top-[-6rem] h-[22rem] w-[22rem] rounded-full bg-[#2280FF]/18 blur-[140px]" />
-        <div className="absolute bottom-[-8rem] right-[-6rem] h-[28rem] w-[28rem] rounded-full bg-[#139E9C]/16 blur-[150px]" />
-      </div>
 
       <div className="relative z-10 mx-auto w-full max-w-[60rem] px-4 py-24 text-center sm:px-6 lg:px-8 lg:py-32">
         <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
-          <h1 className="hero-headline text-balance font-semibold leading-[1.12] tracking-tight text-white">
+          <h1 className="hero-headline text-balance font-semibold leading-[1.12] tracking-tight text-[#EAEAEA]">
             <span className="block">{hero.headline}</span>
           </h1>
 
-          <p className="mt-[1em] text-balance text-[clamp(1rem,2.2vw,1.4rem)] leading-[1.5] text-[rgba(255,255,255,0.85)]">
+          <p className="mt-[1em] text-balance text-[clamp(1rem,2.2vw,1.4rem)] leading-[1.5] text-[#B4B4B4]">
             {subtitleLines.map((line, index) => (
               <span key={`hero-sub-${index}`} className="block">
                 {line}
@@ -105,31 +99,31 @@ const ProofLab = () => {
 
   const formatHighlight = (value: string) =>
     value
-      .replace(/<highlight>(.*?)<\/highlight>/g, '<span class="text-[#139E9C] font-semibold">$1</span>')
-      .replace(/<mark>(.*?)<\/mark>/g, '<span class="text-[#139E9C] font-semibold">$1</span>');
+      .replace(/<highlight>(.*?)<\/highlight>/g, '<span class="text-[#FF4F00] font-semibold">$1</span>')
+      .replace(/<mark>(.*?)<\/mark>/g, '<span class="text-[#FF4F00] font-semibold">$1</span>');
 
   const headingHtml = formatHighlight(t.proofLab.title);
 
   const skeletonCards = Array.from({ length: 4 }).map((_, index) => (
     <article
       key={`skeleton-${index}`}
-      className={`group relative flex h-full flex-col overflow-hidden rounded-[1.5rem] border border-white/10 bg-slate-900/20 backdrop-blur-md shadow-[0_18px_45px_rgba(6,10,25,0.45)] transition-all duration-500 ease-out ${
+      className={`group relative flex h-full flex-col overflow-hidden border border-[#333333] bg-transparent transition-all duration-500 ease-out ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
       }`}
       style={{ transitionDelay: isVisible ? `${index * 120}ms` : '0ms' }}
     >
-      <div className="relative aspect-[16/9] w-full overflow-hidden bg-slate-800/60">
-        <div className="h-full w-full animate-pulse bg-gradient-to-br from-slate-800 via-slate-700 to-slate-800" />
+      <div className="relative aspect-[16/9] w-full overflow-hidden border-b border-[#333333] bg-transparent">
+        <div className="h-full w-full animate-pulse bg-[#1a1a1a]" />
       </div>
       <div className="flex flex-1 flex-col gap-3 px-6 pb-7 pt-6 md:px-7 md:pt-7">
-        <div className="h-5 w-32 animate-pulse rounded-full bg-slate-700" />
-        <div className="h-6 w-3/4 animate-pulse rounded-full bg-slate-700" />
-        <div className="h-4 w-full animate-pulse rounded-full bg-slate-800" />
-        <div className="h-4 w-2/3 animate-pulse rounded-full bg-slate-800" />
+        <div className="h-5 w-32 animate-pulse bg-[#1f1f1f]" />
+        <div className="h-6 w-3/4 animate-pulse bg-[#1f1f1f]" />
+        <div className="h-4 w-full animate-pulse bg-[#1a1a1a]" />
+        <div className="h-4 w-2/3 animate-pulse bg-[#1a1a1a]" />
         <div className="flex gap-2">
-          <div className="h-6 w-16 animate-pulse rounded-full bg-slate-800" />
-          <div className="h-6 w-16 animate-pulse rounded-full bg-slate-800" />
-          <div className="h-6 w-16 animate-pulse rounded-full bg-slate-800" />
+          <div className="h-6 w-16 animate-pulse bg-[#1a1a1a]" />
+          <div className="h-6 w-16 animate-pulse bg-[#1a1a1a]" />
+          <div className="h-6 w-16 animate-pulse bg-[#1a1a1a]" />
         </div>
       </div>
     </article>
@@ -139,7 +133,7 @@ const ProofLab = () => {
     <section
       ref={sectionRef}
       id="projects"
-      className="relative overflow-hidden py-24 lg:py-32 bg-[#0B1320] bg-gradient-to-br from-[#139E9C]/25 via-[#0B1320] to-[#0B1320]"
+      className="relative overflow-hidden bg-[#0f0f0f] py-24 lg:py-32"
     >
 
       <div className="relative z-10 mx-auto max-w-6xl px-6 md:px-8">
@@ -149,10 +143,10 @@ const ProofLab = () => {
           }`}
         >
           <h2
-            className="text-balance text-3xl font-bold text-white md:text-4xl"
+            className="text-balance text-3xl font-bold text-[#EAEAEA] md:text-4xl"
             dangerouslySetInnerHTML={{ __html: headingHtml }}
           />
-          <p className="mt-4 text-base leading-relaxed text-gray-400 md:text-lg">{t.proofLab.subtitle}</p>
+          <p className="mt-4 text-base leading-relaxed text-[#B4B4B4] md:text-lg">{t.proofLab.subtitle}</p>
         </div>
 
         <div
@@ -171,20 +165,20 @@ const ProofLab = () => {
             projects.map((project, index) => (
               <Link key={project.id} href={`/project/${project.slug}`}>
                 <article
-                  className={`group relative flex h-full flex-col overflow-hidden rounded-[1.5rem] border border-white/10 bg-slate-900/20 backdrop-blur-md shadow-[0_18px_45px_rgba(6,10,25,0.45)] transition-all duration-500 ease-out ${
+                  className={`group relative flex h-full flex-col overflow-hidden border border-[#333333] bg-transparent transition-all duration-500 ease-out ${
                     isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                  } hover:-translate-y-[2px] hover:border-white/20 hover:bg-slate-900/30 hover:opacity-95 hover:shadow-[0_24px_60px_rgba(10,20,45,0.6)]`}
+                  }`}
                   style={{ transitionDelay: isVisible ? `${index * 120}ms` : '0ms' }}
                 >
-                  <div className="relative aspect-[16/9] w-full overflow-hidden">
+                  <div className="relative aspect-[16/9] w-full overflow-hidden border-b border-[#333333]">
                     {project.heroImages?.[0] ? (
                       <img
                         src={project.heroImages[0]}
                         alt={project.title}
-                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                        className="h-full w-full object-cover"
                       />
                     ) : (
-                      <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-[#139E9C] via-[#0F6C8C] to-[#121C2D] text-white/85">
+                      <div className="flex h-full w-full items-center justify-center bg-[#1a1a1a] text-[#B4B4B4]">
                         <ShieldCheck className="h-10 w-10" />
                       </div>
                     )}
@@ -192,17 +186,17 @@ const ProofLab = () => {
 
                   <div className="flex flex-1 flex-col gap-4 px-6 pb-7 pt-6 md:px-7 md:pt-7">
                     <div className="flex items-start justify-between gap-3">
-                      <h3 className="text-[19px] font-semibold text-white">{project.title}</h3>
-                      <span className="rounded-full bg-[#139E9C]/15 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[#7ef9f6]">
+                      <h3 className="text-[19px] font-semibold text-[#EAEAEA]">{project.title}</h3>
+                      <span className="border border-[#333333] px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[#FF4F00] font-mono">
                         {project.status}
                       </span>
                     </div>
-                    <p className="text-[15px] leading-6 text-gray-300">{project.tagline}</p>
-                    <div className="flex flex-wrap gap-2 text-[13px] font-medium text-gray-300">
+                    <p className="text-[15px] leading-6 text-[#B4B4B4]">{project.tagline}</p>
+                    <div className="flex flex-wrap gap-2 text-[13px] font-medium text-[#B4B4B4]">
                       {project.techStack?.map((tech) => (
                         <span
                           key={`${project.slug}-${tech}`}
-                          className="rounded-full bg-white/5 px-3 py-1 text-gray-200 ring-1 ring-white/10"
+                          className="border border-[#333333] px-3 py-1 text-[#EAEAEA] font-mono uppercase tracking-[0.12em]"
                         >
                           {tech}
                         </span>
@@ -248,12 +242,12 @@ const OfferCards = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative py-16 lg:py-20 overflow-hidden"
-      style={{ backgroundImage: gradientTopLeft }}
+      className="relative overflow-hidden py-16 lg:py-20"
+      style={{ backgroundColor: gradientTopLeft }}
     >
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center">
+      <div className="relative z-10 mx-auto max-w-7xl px-6 text-center lg:px-8">
         <h2
-          className={`section-heading text-gray-900 mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+          className={`section-heading mb-12 text-[#EAEAEA] transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
           dangerouslySetInnerHTML={{ __html: t.offers.heading }}
         />
 
@@ -265,25 +259,25 @@ const OfferCards = () => {
           {offers.map((offer, index) => (
             <div
               key={index}
-              className="card-light relative flex h-full flex-col rounded-3xl border border-gray-100 bg-white/90 p-6 md:p-8 shadow-sm transition-all duration-300 ease-out transform hover:-translate-y-1 hover:scale-[1.015] hover:shadow-xl"
+              className="relative flex h-full flex-col border border-[#333333] bg-transparent p-6 transition-all duration-300 ease-out md:p-8"
             >
               {offer.badge && (
-                <span className="absolute top-4 right-4 text-xs font-semibold bg-[#2280FF] text-white px-2 py-1 rounded-full">
+                <span className="absolute right-4 top-4 border border-[#333333] px-2 py-1 text-xs font-semibold text-[#FF4F00] font-mono uppercase tracking-[0.12em]">
                   {offer.badge}
                 </span>
               )}
               <h3
-                className="text-xl font-semibold text-gray-900 mb-2"
+                className="mb-2 text-xl font-semibold text-[#EAEAEA]"
                 dangerouslySetInnerHTML={{ __html: offer.title }}
               />
-              <p className="text-2xl font-bold text-gray-900 mb-4">{offer.price}</p>
-              <p className="text-gray-700 mb-6 flex-1">{offer.desc}</p>
+              <p className="mb-4 text-2xl font-bold text-[#EAEAEA]">{offer.price}</p>
+              <p className="mb-6 flex-1 text-[#B4B4B4]">{offer.desc}</p>
               <a href={`${base}${offer.href}`} className="btn-primary mt-auto">{offer.cta}</a>
             </div>
           ))}
         </div>
 
-        <p className="text-gray-700 mt-6">{t.offers.note}</p>
+        <p className="mt-6 text-[#B4B4B4]">{t.offers.note}</p>
       </div>
     </section>
   );
@@ -313,30 +307,30 @@ const ROIMath = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative py-16 lg:py-20 overflow-hidden"
-      style={{ backgroundColor: 'var(--off-white)' }}
+      className="relative overflow-hidden py-16 lg:py-20"
+      style={{ backgroundColor: '#0f0f0f' }}
     >
       <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 text-center">
         <div className={`mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2
-            className="section-heading text-gray-900 mb-6"
+            className="section-heading mb-6 text-[#EAEAEA]"
             dangerouslySetInnerHTML={{ __html: t.roi.title }}
           />
         </div>
 
         <div className={`grid md:grid-cols-2 gap-8 transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="card-light p-6 md:p-8">
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">{lang === 'fr' ? 'Sans automatisation' : 'Without automation'}</h3>
-            <p className="text-gray-700">{t.roi.without}</p>
+          <div className="border border-[#333333] p-6 md:p-8">
+            <h3 className="mb-2 text-xl font-semibold text-[#EAEAEA]">{lang === 'fr' ? 'Sans automatisation' : 'Without automation'}</h3>
+            <p className="text-[#B4B4B4]">{t.roi.without}</p>
           </div>
-          <div className="card-light p-6 md:p-8">
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">{lang === 'fr' ? 'Avec automatisation' : 'With automation'}</h3>
-            <p className="text-gray-700">{t.roi.with}</p>
+          <div className="border border-[#333333] p-6 md:p-8">
+            <h3 className="mb-2 text-xl font-semibold text-[#EAEAEA]">{lang === 'fr' ? 'Avec automatisation' : 'With automation'}</h3>
+            <p className="text-[#B4B4B4]">{t.roi.with}</p>
           </div>
         </div>
 
-        <p className="text-gray-700 mt-8">{t.roi.note}</p>
-        <p className="text-gray-700 text-xs mt-2">{t.roi.disclaimer}</p>
+        <p className="mt-8 text-[#B4B4B4]">{t.roi.note}</p>
+        <p className="mt-2 text-xs text-[#777777]">{t.roi.disclaimer}</p>
       </div>
     </section>
   );
@@ -348,22 +342,22 @@ const Checklist = () => {
   const { t, lang } = useLanguage();
   const newsletterHref = lang === 'fr' ? '/fr/newsletter' : '/en/newsletter';
   return (
-    <section className="relative py-16 lg:py-20 overflow-hidden" style={{ backgroundColor: 'var(--off-white)' }}>
+    <section className="relative overflow-hidden py-16 lg:py-20" style={{ backgroundColor: '#0f0f0f' }}>
       <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8">
-        <div className="card-light p-6 md:p-8 text-center">
-          <div className="inline-flex items-center mb-4 text-sm font-medium text-gray-700">
-            <Shield className="w-5 h-5 text-[#139E9B] mr-2" />
+        <div className="border border-[#333333] p-6 text-center md:p-8">
+          <div className="mb-4 inline-flex items-center text-sm font-medium text-[#B4B4B4] font-mono uppercase tracking-[0.12em]">
+            <Shield className="mr-2 h-5 w-5 text-[#FF4F00]" />
             <span>{t.checklist.eyebrow}</span>
           </div>
           <h3
-            className="text-headline text-gray-900 mb-4"
+            className="text-headline mb-4 text-[#EAEAEA]"
             dangerouslySetInnerHTML={{ __html: t.checklist.title }}
           />
-          <p className="text-gray-700 mb-6">{t.checklist.sub}</p>
-          <ul className="space-y-2 text-left text-gray-700 mb-6">
+          <p className="mb-6 text-[#B4B4B4]">{t.checklist.sub}</p>
+          <ul className="mb-6 space-y-2 text-left text-[#B4B4B4]">
             {t.checklist.points.map((p: string, i: number) => (
               <li key={i} className="flex items-start">
-                <CheckCircle className="w-4 h-4 text-[#139E9B] mr-2 mt-1 flex-shrink-0" />
+                <CheckCircle className="mr-2 mt-1 h-4 w-4 flex-shrink-0 text-[#FF4F00]" />
                 <span dangerouslySetInnerHTML={{ __html: p }} />
               </li>
             ))}

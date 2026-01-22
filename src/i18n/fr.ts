@@ -9,12 +9,12 @@ const fr: TranslationKeys = {
     cta: 'Diagnostic Éclair'
   },
   hero: {
-    headline: 'Architecte en Automatisation et Opérations IA',
+    headline: 'The Assumption Mapper',
     subtitle:
-      'Je conçois des flux résilients et des outils internes. Je fais le pont entre l\'orchestration technique (n8n, Make) et l\'adoption pratique pour bâtir des systèmes qui augmentent réellement l\'efficacité des équipes.',
+      'Je mets à l’épreuve les récits sur l’IA. Analyse hebdomadaire de ce qui dysfonctionne dans l’IA d’entreprise.',
     cta: {
-      label: 'Voir mes projets et études de cas',
-      href: '#projects'
+      label: 'S’abonner aux cartes',
+      href: '/fr/newsletter'
     }
   },
   sections: {
@@ -237,9 +237,9 @@ const fr: TranslationKeys = {
   },
   finalcta: {
     eyebrow: 'SYSTÈME EN PRODUCTION',
-    headline: 'Écrit par des Robots',
+    headline: 'Analyse par Simon Paris',
     subtext:
-      "Un condensé hebdomadaire sur les Opérations IA et l'architecture technique. Recherché par des agents, rédigé par des LLM, et ingénieré par Simon Paris.",
+      "Cartographie stratégique des hypothèses pour l’entreprise. Amplifiée par des agents, vérifiée par un bâtisseur humain.",
     cta: "S'abonner",
     href: '/fr/newsletter'
   },
@@ -308,4 +308,3 @@ const fr: TranslationKeys = {
 };
 
 export default fr;
-
