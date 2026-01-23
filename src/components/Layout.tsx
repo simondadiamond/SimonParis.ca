@@ -19,6 +19,9 @@ export const Header: React.FC<{
     typeof window !== 'undefined' &&
     (window.location.pathname === '/privacy' ||
       window.location.pathname === '/fr/politique-confidentialite');
+  const isHomePage =
+    typeof window !== 'undefined' &&
+    (window.location.pathname === '/' || window.location.pathname === '/fr');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -83,9 +86,11 @@ export const Header: React.FC<{
     ? 'bg-[#0f0f0f] border-b border-[#333333]'
     : isPrivacyPage
     ? 'bg-[#0f0f0f] border-b border-[#333333]'
+    : !isHomePage
+    ? 'bg-[#0f0f0f] border-b border-[#333333]'
     : isScrolled
     ? 'bg-[#0f0f0f] border-b border-[#333333]'
-    : 'bg-[#0f0f0f] border-b border-[#333333]';
+    : 'bg-transparent border-transparent';
 
   const headerClassName = `fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${headerBackgroundClass}`;
 
