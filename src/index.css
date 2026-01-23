@@ -236,7 +236,7 @@ mark {
 
 .lab-grid {
   background-color: var(--lab-black);
-  background-image: radial-gradient(rgba(234, 234, 234, 0.1) 1px, transparent 0);
+  background-image: radial-gradient(rgba(234, 234, 234, 0.16) 1px, transparent 0);
   background-size: 24px 24px;
   background-position: 0 0;
 }
