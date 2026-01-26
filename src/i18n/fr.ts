@@ -10,10 +10,9 @@ const fr: TranslationKeys = {
   },
   hero: {
     headline: 'The Assumption Mapper',
-    subtitle:
-      'Je mets à l’épreuve les récits sur l’IA. Analyse hebdomadaire de ce qui dysfonctionne dans l’IA d’entreprise.',
+    subtitle: 'Mettre à l’épreuve les décisions d’adoption de l’IA',
     cta: {
-      label: 'S’abonner aux cartes',
+      label: 'Lire les analyses',
       href: '/fr/newsletter'
     }
   },
