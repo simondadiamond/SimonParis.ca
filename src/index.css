@@ -221,6 +221,22 @@ mark {
   font-size: clamp(2rem, 3.6vw, 3.15rem);
 }
 
+.hero-subtitle {
+  position: relative;
+  display: inline-block;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: rgba(234, 234, 234, 0.72);
+}
+
+.hero-subtitle::before,
+.hero-subtitle::after {
+  content: '—';
+  display: inline-block;
+  margin: 0 0.55em;
+  color: rgba(234, 234, 234, 0.45);
+}
+
 .section-heading {
   font-family: 'Merriweather', serif;
   font-weight: 600;
