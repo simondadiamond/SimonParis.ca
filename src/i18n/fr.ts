@@ -10,7 +10,7 @@ const fr: TranslationKeys = {
   },
   hero: {
     headline: 'The Assumption Mapper',
-    subtitle: 'Mettre à l’épreuve les décisions d’adoption de l’IA à fort enjeu',
+    subtitle: 'Tester les décisions critiques d’adoption de l’IA',
     cta: {
       label: 'Lire les analyses',
       href: '#projects'
