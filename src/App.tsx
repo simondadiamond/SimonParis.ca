@@ -22,7 +22,6 @@ const Link: React.FC<{ href: string; children: React.ReactNode }> = ({ href, chi
 const Hero = () => {
   const { t } = useLanguage();
   const hero = t.hero;
-  const subtitleLines = hero.subtitle.split('\n');
 
   return (
     <section
@@ -36,12 +35,8 @@ const Hero = () => {
             <span className="block">{hero.headline}</span>
           </h1>
 
-          <p className="mt-[1em] text-balance text-[clamp(1rem,2.2vw,1.4rem)] leading-[1.5] text-[#B4B4B4]">
-            {subtitleLines.map((line, index) => (
-              <span key={`hero-sub-${index}`} className="block">
-                {line}
-              </span>
-            ))}
+          <p className="hero-subtitle mt-[1em] text-balance text-[clamp(1rem,2.2vw,1.4rem)] leading-[1.5]">
+            {hero.subtitle}
           </p>
 
           <div className="mt-[1.5em] flex w-full max-w-xs flex-col items-center gap-3 sm:max-w-sm">

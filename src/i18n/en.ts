@@ -9,10 +9,10 @@ export const en = {
   },
   hero: {
     headline: 'The Assumption Mapper',
-    subtitle: 'Stress-testing AI adoption decisions',
+    subtitle: 'Stress-testing high-stakes AI adoption decisions',
     cta: {
       label: 'Read the analyses',
-      href: '/en/newsletter'
+      href: '#projects'
     }
   },
   sections: {
