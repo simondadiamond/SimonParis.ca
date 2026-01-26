@@ -9,10 +9,9 @@ export const en = {
   },
   hero: {
     headline: 'The Assumption Mapper',
-    subtitle:
-      'I stress-test AI narratives. Weekly analysis on what’s broken in enterprise AI.',
+    subtitle: 'Stress-testing AI adoption decisions',
     cta: {
-      label: 'Subscribe for Maps',
+      label: 'Read the analyses',
       href: '/en/newsletter'
     }
   },
