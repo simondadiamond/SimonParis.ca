@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Header, Footer } from '../components/Layout';
+import { Navbar, Footer } from '../components/Layout';
 import { useLanguage } from '../LanguageProvider';
 import { translations, type Language } from '../i18n';
 
@@ -43,7 +43,7 @@ const NewsletterConfirmation: React.FC = () => {
 
   return (
     <div className="flex min-h-screen flex-col bg-[#0f0f0f] text-[#EAEAEA]">
-      <Header
+      <Navbar
         langToggle={{
           fr: translations.fr.newsletter.meta.canonical,
           en: translations.en.newsletter.meta.canonical

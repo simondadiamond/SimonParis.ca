@@ -1,7 +1,7 @@
 import { PACK_PRICE } from '../config';
 
 export const en = {
-  header: {
+  navbar: {
     brand: 'Simon Paris',
     languageToggle: 'EN/FR',
     email: 'info@simonparis.ca',

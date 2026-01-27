@@ -5,7 +5,7 @@ import {
   ShieldCheck,
   Shield
 } from 'lucide-react';
-import { Header } from './components/Layout';
+import { Navbar } from './components/Layout';
 import PartnerBar from './components/PartnerBar';
 import FinalCTA from './components/FinalCTA';
 import { useProjects } from './hooks/useProjects';
@@ -377,7 +377,7 @@ const Checklist = () => {
 function App() {
   return (
     <div className="min-h-screen">
-      <Header />
+      <Navbar />
       <Hero />
       <PartnerBar />
       <ProofLab />

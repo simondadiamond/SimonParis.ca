@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Header, Footer } from '../components/Layout';
+import { Navbar, Footer } from '../components/Layout';
 import { useLanguage } from '../LanguageProvider';
 
 const PrivacyPolicy = () => {
@@ -11,7 +11,7 @@ const PrivacyPolicy = () => {
 
   return (
     <div className="min-h-screen bg-[#0f0f0f] text-[#EAEAEA]">
-      <Header langToggle={{ fr: '/fr/politique-confidentialite', en: '/privacy' }} />
+      <Navbar langToggle={{ fr: '/fr/politique-confidentialite', en: '/privacy' }} />
       <main className="max-w-[800px] mx-auto pt-52 md:pt-60 p-4 md:p-8">
         <h1 className="section-heading text-[#EAEAEA] text-balance mb-6">Privacy Policy (Law 25 &amp; CASL Compliance)</h1>
         <p className="mb-6 text-[0.9rem] md:text-base text-[#B4B4B4] leading-relaxed">

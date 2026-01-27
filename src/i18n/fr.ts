@@ -2,7 +2,7 @@ import type { TranslationKeys } from './en';
 import { PACK_PRICE } from '../config';
 
 const fr: TranslationKeys = {
-  header: {
+  navbar: {
     brand: 'Simon Paris',
     languageToggle: 'FR/EN',
     email: 'info@simonparis.ca',

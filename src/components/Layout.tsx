@@ -7,7 +7,18 @@ const getTargetHref = (
   langToggle?: { fr: string; en: string }
 ) => (targetLang === 'fr' ? langToggle?.fr ?? '/fr' : langToggle?.en ?? '/');
 
-export const Header: React.FC<{
+const normalizePath = (pathname: string) => {
+  const trimmed = pathname.replace(/\/+$/, '');
+  return trimmed === '' ? '/' : trimmed;
+};
+
+const isHomePath = (pathname: string) =>
+  ['/', '/index.html', '/fr', '/fr/index.html'].includes(normalizePath(pathname));
+
+const isPrivacyPath = (pathname: string) =>
+  ['/privacy', '/fr/politique-confidentialite'].includes(normalizePath(pathname));
+
+export const Navbar: React.FC<{
   langToggle?: { fr: string; en: string };
   forceDarkBackground?: boolean;
 }> = ({ langToggle, forceDarkBackground }) => {
@@ -16,12 +27,8 @@ export const Header: React.FC<{
   const { t, lang, setLang } = useLanguage();
 
   const isPrivacyPage =
-    typeof window !== 'undefined' &&
-    (window.location.pathname === '/privacy' ||
-      window.location.pathname === '/fr/politique-confidentialite');
-  const isHomePage =
-    typeof window !== 'undefined' &&
-    (window.location.pathname === '/' || window.location.pathname === '/fr');
+    typeof window !== 'undefined' && isPrivacyPath(window.location.pathname);
+  const isHomePage = typeof window !== 'undefined' && isHomePath(window.location.pathname);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -82,7 +89,7 @@ export const Header: React.FC<{
     );
   };
 
-  const headerBackgroundClass = forceDarkBackground
+  const navbarBackgroundClass = forceDarkBackground
     ? 'bg-[#0f0f0f] border-b border-[#333333]'
     : isPrivacyPage
     ? 'bg-[#0f0f0f] border-b border-[#333333]'
@@ -92,18 +99,18 @@ export const Header: React.FC<{
     ? 'bg-[#0f0f0f] border-b border-[#333333]'
     : 'bg-transparent border-transparent';
 
-  const headerClassName = `fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${headerBackgroundClass}`;
+  const navbarClassName = `fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${navbarBackgroundClass}`;
 
   return (
     <>
-      <header className={headerClassName}>
+      <header className={navbarClassName}>
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
           <a
             href={lang === 'fr' ? '/fr' : '/'}
             onClick={() => localStorage.setItem('lang', lang)}
             className={`text-xl font-semibold tracking-tight ${resolvedTextClass}`}
           >
-            {t.header.brand}
+            {t.navbar.brand}
           </a>
           <div className="hidden items-center gap-8 md:flex">
             <LanguageToggle />
