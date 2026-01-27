@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Header, Footer } from '../components/Layout';
+import { Navbar, Footer } from '../components/Layout';
 import PartnerBar from '../components/PartnerBar';
 import {
   ChevronDown,
@@ -211,7 +211,7 @@ const Landing: React.FC<{ lang: Lang }> = ({ lang }) => {
 
   return (
     <div className="font-sans bg-[#0f0f0f] text-[#EAEAEA]">
-      <Header langToggle={{ fr: frHref, en: enHref }} ctaHref="#demo" ctaLabel={t.navDemo} />
+      <Navbar langToggle={{ fr: frHref, en: enHref }} ctaHref="#demo" ctaLabel={t.navDemo} />
 
       <main>
         <section

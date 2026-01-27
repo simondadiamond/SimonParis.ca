@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { ArrowRight, CheckCircle, ChevronLeft, ChevronRight } from 'lucide-react';
-import { Header, Footer } from '../components/Layout';
+import { Navbar, Footer } from '../components/Layout';
 import { useProjects } from '../hooks/useProjects';
 
 interface ProjectDetailProps {
@@ -203,7 +203,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ slug }) => {
 
   return (
     <div className="relative min-h-screen bg-[#0f0f0f] text-[#EAEAEA]">
-      <Header forceDarkBackground />
+      <Navbar forceDarkBackground />
       <div className="relative overflow-hidden">
         <div className="relative z-10 mx-auto max-w-6xl px-6 pb-16 pt-28 lg:pb-24 lg:pt-36">
           <a
