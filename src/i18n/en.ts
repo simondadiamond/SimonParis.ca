@@ -8,10 +8,10 @@ export const en = {
     cta: 'Diagnostic Éclair'
   },
   hero: {
-    headline: 'The Assumption Mapper',
-    subtitle: 'Stress-testing high-stakes AI adoption decisions',
+    headline: 'The Meta Architect',
+    subtitle: 'Designing the architecture of leverage. Amplified by agents, verified by a human builder.',
     cta: {
-      label: 'Read the analyses',
+      label: 'View the Systems',
       href: '#projects'
     }
   },
@@ -43,10 +43,10 @@ export const en = {
   },
   cta: {
     audit: {
-      title: 'Looking for a Senior AI Operations Architect?',
+      title: 'Seeking a Lead Systems Architect?',
       subtitle:
-        'I build documented, resilient automation systems that scale. No quick hacks—just reliable Ops.',
-      ctaLabel: 'View Profile on LinkedIn',
+        'I design frameworks that enshrine intelligence. No quick hacks—just structural operational excellence.',
+      ctaLabel: 'View Strategic Profile',
       ctaHref: 'https://www.linkedin.com/in/simonparis1/'
     }
   },
@@ -233,10 +233,10 @@ export const en = {
   },
   finalcta: {
     eyebrow: 'PRODUCTION SYSTEM',
-    headline: 'Analysis by Simon Paris',
+    headline: 'Meta-Insights',
     subtext:
-      'Strategic assumption mapping for the enterprise. Amplified by agents, verified by a human builder.',
-    cta: 'Subscribe for Insights',
+      'Occasional blueprints on systems, leverage, and the 11% production gap.',
+    cta: 'Coming Soon',
     href: '/en/newsletter'
   },
   stickyCta: 'Join Newsletter',
