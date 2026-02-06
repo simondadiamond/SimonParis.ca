@@ -9,10 +9,10 @@ const fr: TranslationKeys = {
     cta: 'Diagnostic Éclair'
   },
   hero: {
-    headline: 'The Assumption Mapper',
-    subtitle: 'Tester les décisions critiques d’adoption de l’IA',
+    headline: "L'Architecte Meta",
+    subtitle: "Concevoir l'architecture de l'effet de levier. Amplifié par des agents, vérifié par un humain.",
     cta: {
-      label: 'Lire les analyses',
+      label: 'Voir les systèmes',
       href: '#projects'
     }
   },
@@ -44,10 +44,10 @@ const fr: TranslationKeys = {
   },
   cta: {
     audit: {
-      title: 'Vous cherchez un Architecte en Opérations IA ?',
+      title: 'Vous cherchez un Architecte principal des systèmes ?',
       subtitle:
-        'Je bâtis des systèmes d\'automatisation documentés et résilients. Pas de solutions temporaires, seulement des opérations fiables.',
-      ctaLabel: 'Voir mon profil LinkedIn',
+        'Je conçois des cadres qui inscrivent l’intelligence dans la structure. Pas de solutions temporaires, seulement une excellence opérationnelle structurelle.',
+      ctaLabel: 'Voir le profil stratégique',
       ctaHref: 'https://www.linkedin.com/in/simonparis1/'
     }
   },
@@ -236,10 +236,10 @@ const fr: TranslationKeys = {
   },
   finalcta: {
     eyebrow: 'SYSTÈME EN PRODUCTION',
-    headline: 'Analyse par Simon Paris',
+    headline: 'Meta-Insights',
     subtext:
-      "Cartographie stratégique des hypothèses pour l’entreprise. Amplifiée par des agents, vérifiée par un bâtisseur humain.",
-    cta: "S'abonner",
+      "Plans occasionnels sur les systèmes, l'effet de levier et l'écart de production de 11 %.",
+    cta: 'Bientôt',
     href: '/fr/newsletter'
   },
   stickyCta: 'Joindre l’infolettre',
