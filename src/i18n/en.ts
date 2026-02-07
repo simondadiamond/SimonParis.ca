@@ -15,6 +15,38 @@ export const en = {
       href: '#projects'
     }
   },
+  coreThesis: {
+    title: 'The 11% Problem',
+    lines: [
+      'Most AI adoption fails. Not because of bad models—because of bad architecture.',
+      '<highlight>71%</highlight> of businesses experiment with AI agents. Only <highlight>11%</highlight> reach production.',
+      "The gap isn't intelligence. It's structure.",
+      "I build the meta-layer that bridges that gap: research-backed systems that don't break, content architectures that don't sound like AI slop, and frameworks that run without constant babysitting.",
+      'This is Meta Architecture.'
+    ]
+  },
+  productTeaser: {
+    title: 'The Framework',
+    subtitle: 'The Intelligence File System',
+    description: 'How I generate 10+ high-quality content assets from a single research session.',
+    detail: "This isn't a prompt collection. It's a knowledge architecture:",
+    stages: [
+      {
+        title: 'Stage 1',
+        description: 'Research Agent (Web scraping + evidence extraction)'
+      },
+      {
+        title: 'Stage 2',
+        description: 'Intelligence File (Structured JSON schema for reusable facts)'
+      },
+      {
+        title: 'Stage 3',
+        description: "Content Generator (Platform-specific output that doesn't sound like ChatGPT)"
+      }
+    ],
+    leverage: 'One research session → One Intelligence File → Unlimited leverage.',
+    cta: 'Get the Framework'
+  },
   sections: {
     problem: {
       heading:

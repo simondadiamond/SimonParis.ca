@@ -16,6 +16,38 @@ const fr: TranslationKeys = {
       href: '#projects'
     }
   },
+  coreThesis: {
+    title: 'Le Problème du 11%',
+    lines: [
+      "La plupart des adoptions d'IA échouent. Pas à cause des modèles—à cause de l'architecture.",
+      '<highlight>71%</highlight> des entreprises expérimentent avec des agents IA. Seulement <highlight>11%</highlight> atteignent la production.',
+      "L'écart n'est pas l'intelligence. C'est la structure.",
+      "Je construis la méta-couche qui comble cet écart : des systèmes basés sur la recherche qui ne cassent pas, des architectures de contenu qui ne sonnent pas comme du spam IA, et des frameworks qui fonctionnent sans supervision constante.",
+      'C’est la Méta-Architecture.'
+    ]
+  },
+  productTeaser: {
+    title: 'Le Framework',
+    subtitle: "Le Système de Fichiers d'Intelligence",
+    description: "Comment je génère plus de 10 actifs de contenu de haute qualité à partir d'une seule session de recherche.",
+    detail: "Ce n'est pas une collection de prompts. C'est une architecture de connaissances :",
+    stages: [
+      {
+        title: 'Étape 1',
+        description: 'Agent de Recherche (Web scraping + extraction de preuves)'
+      },
+      {
+        title: 'Étape 2',
+        description: "Fichier d'Intelligence (Schéma JSON structuré pour des faits réutilisables)"
+      },
+      {
+        title: 'Étape 3',
+        description: 'Générateur de Contenu (Sortie spécifique à la plateforme qui ne sonne pas comme ChatGPT)'
+      }
+    ],
+    leverage: "Une session de recherche → Un Fichier d'Intelligence → Effet de levier illimité.",
+    cta: 'Obtenir le Framework'
+  },
   sections: {
     problem: {
       heading:
