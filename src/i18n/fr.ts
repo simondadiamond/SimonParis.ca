@@ -21,9 +21,7 @@ const fr: TranslationKeys = {
     title: 'Du contenu qui sonne comme vous. À grande échelle.',
     subtitle: 'La plupart du contenu IA se lit comme du contenu IA. Pas le vôtre.',
     outcomes: [
-      'Une session de recherche.',
-      "Un fichier d'intelligence structuré.",
-      '10+ publications prêtes à publier — chacune indéniablement la vôtre.'
+      'Une session de recherche. Des publications illimitées — chacune indéniablement la vôtre.'
     ],
     cards: [
       {
@@ -39,7 +37,7 @@ const fr: TranslationKeys = {
       {
         label: 'OUTPUT',
         title: 'Contenu natif par plateforme',
-        body: "Des publications conçues pour l'algorithme et la culture de chaque plateforme. L'autorité de LinkedIn. La concision de Twitter. La profondeur d'une infolettre. Pas de copier-coller, pas d'odeur d'IA."
+        body: "Conçu pour l'algorithme et la culture de chaque plateforme. Pas du copier-coller. Pas du contenu IA générique."
       }
     ],
     cta: {

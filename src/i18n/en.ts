@@ -20,9 +20,7 @@ export const en = {
     title: 'Content that sounds like you. At scale.',
     subtitle: "Most AI content reads like AI content. Yours won't.",
     outcomes: [
-      'One research session.',
-      'One structured intelligence file.',
-      '10+ platform-ready posts — each one unmistakably yours.'
+      'One research session. Unlimited platform-ready posts — each one unmistakably yours.'
     ],
     cards: [
       {
@@ -38,7 +36,7 @@ export const en = {
       {
         label: 'OUTPUT',
         title: 'Platform-Native Content',
-        body: "Posts engineered for each platform's algorithm and culture. LinkedIn authority. Twitter brevity. Newsletter depth. No copy-paste, no AI smell."
+        body: "Engineered for each platform's algorithm and culture. Not copy-paste. Not AI slop."
       }
     ],
     cta: {

@@ -56,8 +56,8 @@ const ContentEngine = () => {
   return (
     <section className="relative bg-[#0f0f0f] py-20 text-[#EAEAEA] sm:py-24">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
-        <div className="border border-[#333333] bg-[#111111] px-6 py-10 sm:px-8 lg:px-12">
-          <div className="max-w-3xl space-y-4">
+        <div className="border border-[#333333] bg-[#111111] px-6 py-10 text-center sm:px-8 lg:px-12">
+          <div className="mx-auto max-w-3xl space-y-4">
             <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#B4B4B4] font-mono">
               {t.contentEngine.label}
             </p>
@@ -74,7 +74,7 @@ const ContentEngine = () => {
 
           <div className="mt-10 grid gap-4 md:grid-cols-3">
             {t.contentEngine.cards.map((card: { label: string; title: string; body: string }) => (
-              <div key={card.title} className="border border-[#333333] bg-[#0f0f0f] p-5">
+              <div key={card.title} className="border border-[#333333] bg-[#0f0f0f] p-5 text-center">
                 <h4 className="text-sm font-semibold uppercase tracking-[0.12em] text-[#E04500] font-mono">
                   {card.label}
                 </h4>
@@ -84,7 +84,7 @@ const ContentEngine = () => {
             ))}
           </div>
 
-          <div className="mt-8">
+          <div className="mt-8 flex flex-col items-center">
             <a href={t.contentEngine.cta.href} className="btn-primary">
               {t.contentEngine.cta.label}
             </a>
