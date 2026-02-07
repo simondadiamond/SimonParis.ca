@@ -50,68 +50,45 @@ const Hero = () => {
   );
 };
 
-const CoreThesis = () => {
-  const { t } = useLanguage();
-
-  const formatHighlight = (value: string) =>
-    value.replace(/<highlight>(.*?)<\/highlight>/g, '<span class="text-[#E04500] font-semibold">$1</span>');
-
-  return (
-    <section className="relative bg-[#0f0f0f] py-20 text-[#EAEAEA] sm:py-24">
-      <div className="mx-auto max-w-5xl px-6 text-center lg:px-8">
-        <h2 className="text-balance text-3xl font-semibold md:text-4xl">{t.coreThesis.title}</h2>
-        <div className="mt-6 space-y-4 text-base leading-relaxed text-[#B4B4B4] md:text-lg">
-          {t.coreThesis.lines.map((line: string, index: number) => (
-            <p key={index} dangerouslySetInnerHTML={{ __html: formatHighlight(line) }} />
-          ))}
-        </div>
-        <div className="mt-10">
-          <hr className="border-[#333333]" />
-        </div>
-      </div>
-    </section>
-  );
-};
-
-const ProductTeaser = () => {
+const ContentEngine = () => {
   const { t } = useLanguage();
 
   return (
     <section className="relative bg-[#0f0f0f] py-20 text-[#EAEAEA] sm:py-24">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <div className="border border-[#333333] bg-[#111111] px-6 py-10 sm:px-8 lg:px-12">
-          <div className="max-w-3xl">
-            <h2 className="text-2xl font-semibold text-[#EAEAEA] md:text-3xl">{t.productTeaser.title}</h2>
-            <h3 className="mt-3 text-xl font-semibold text-[#EAEAEA] md:text-2xl">{t.productTeaser.subtitle}</h3>
-            <p className="mt-4 text-base leading-relaxed text-[#B4B4B4] md:text-lg">
-              {t.productTeaser.description}
+          <div className="max-w-3xl space-y-4">
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#B4B4B4] font-mono">
+              {t.contentEngine.label}
             </p>
-            <p className="mt-4 text-base leading-relaxed text-[#B4B4B4] md:text-lg">
-              {t.productTeaser.detail}
-            </p>
+            <h2 className="text-balance text-2xl font-semibold text-[#EAEAEA] md:text-3xl">
+              {t.contentEngine.title}
+            </h2>
+            <p className="text-base text-[#EAEAEA] md:text-lg">{t.contentEngine.subtitle}</p>
+            <div className="space-y-4 pt-2 text-base leading-relaxed text-[#B4B4B4] md:text-lg">
+              {t.contentEngine.outcomes.map((outcome: string) => (
+                <p key={outcome}>{outcome}</p>
+              ))}
+            </div>
           </div>
 
-          <div className="mt-8 grid gap-4 md:grid-cols-3">
-            {t.productTeaser.stages.map((stage: { title: string; description: string }) => (
-              <div key={stage.title} className="border border-[#333333] bg-[#0f0f0f] p-5">
+          <div className="mt-10 grid gap-4 md:grid-cols-3">
+            {t.contentEngine.cards.map((card: { label: string; title: string; body: string }) => (
+              <div key={card.title} className="border border-[#333333] bg-[#0f0f0f] p-5">
                 <h4 className="text-sm font-semibold uppercase tracking-[0.12em] text-[#E04500] font-mono">
-                  {stage.title}
+                  {card.label}
                 </h4>
-                <p className="mt-3 text-sm leading-relaxed text-[#B4B4B4] md:text-base">
-                  {stage.description}
-                </p>
+                <h3 className="mt-3 text-lg font-semibold text-[#EAEAEA]">{card.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-[#B4B4B4] md:text-base">{card.body}</p>
               </div>
             ))}
           </div>
 
-          <p className="mt-6 text-base leading-relaxed text-[#B4B4B4] md:text-lg">
-            {t.productTeaser.leverage}
-          </p>
-
           <div className="mt-8">
-            <button type="button" className="btn-primary cursor-not-allowed opacity-60" disabled>
-              {t.productTeaser.cta}
-            </button>
+            <a href={t.contentEngine.cta.href} className="btn-primary">
+              {t.contentEngine.cta.label}
+            </a>
+            <p className="mt-3 text-sm text-[#B4B4B4]">{t.contentEngine.ctaNote}</p>
           </div>
         </div>
       </div>
@@ -448,10 +425,9 @@ function App() {
     <div className="min-h-screen">
       <Navbar />
       <Hero />
-      <CoreThesis />
       <PartnerBar />
       <ProofLab />
-      <ProductTeaser />
+      <ContentEngine />
       {/* <OfferCards /> */}
       {/* <ROIMath /> */}
       {/* <Checklist /> */}

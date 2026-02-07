@@ -16,37 +16,37 @@ const fr: TranslationKeys = {
       href: '#projects'
     }
   },
-  coreThesis: {
-    title: 'Le Problème du 11%',
-    lines: [
-      "La plupart des adoptions d'IA échouent. Pas à cause des modèles—à cause de l'architecture.",
-      '<highlight>71%</highlight> des entreprises expérimentent avec des agents IA. Seulement <highlight>11%</highlight> atteignent la production.',
-      "L'écart n'est pas l'intelligence. C'est la structure.",
-      "Je construis la méta-couche qui comble cet écart : des systèmes basés sur la recherche qui ne cassent pas, des architectures de contenu qui ne sonnent pas comme du spam IA, et des frameworks qui fonctionnent sans supervision constante.",
-      'C’est la Méta-Architecture.'
-    ]
-  },
-  productTeaser: {
-    title: 'Le Framework',
-    subtitle: "Le Système de Fichiers d'Intelligence",
-    description: "Comment je génère plus de 10 actifs de contenu de haute qualité à partir d'une seule session de recherche.",
-    detail: "Ce n'est pas une collection de prompts. C'est une architecture de connaissances :",
-    stages: [
+  contentEngine: {
+    label: 'LE SYSTÈME',
+    title: 'Du contenu qui sonne comme vous. À grande échelle.',
+    subtitle: 'La plupart du contenu IA se lit comme du contenu IA. Pas le vôtre.',
+    outcomes: [
+      'Une session de recherche.',
+      "Un fichier d'intelligence structuré.",
+      '10+ publications prêtes à publier — chacune indéniablement la vôtre.'
+    ],
+    cards: [
       {
-        title: 'Étape 1',
-        description: 'Agent de Recherche (Web scraping + extraction de preuves)'
+        label: 'RECHERCHE',
+        title: 'Contexte en profondeur',
+        body: "Votre sujet, décortiqué à travers le prisme de votre marque, votre audience et ce qui capte réellement l'attention — pas des résumés génériques."
       },
       {
-        title: 'Étape 2',
-        description: "Fichier d'Intelligence (Schéma JSON structuré pour des faits réutilisables)"
+        label: 'STRUCTURE',
+        title: "Architecture d'intelligence",
+        body: "Chaque angle, intention et insight cartographié dans une couche de savoir réutilisable. Une session de réflexion, des rendements composés."
       },
       {
-        title: 'Étape 3',
-        description: 'Générateur de Contenu (Sortie spécifique à la plateforme qui ne sonne pas comme ChatGPT)'
+        label: 'OUTPUT',
+        title: 'Contenu natif par plateforme',
+        body: "Des publications conçues pour l'algorithme et la culture de chaque plateforme. L'autorité de LinkedIn. La concision de Twitter. La profondeur d'une infolettre. Pas de copier-coller, pas d'odeur d'IA."
       }
     ],
-    leverage: "Une session de recherche → Un Fichier d'Intelligence → Effet de levier illimité.",
-    cta: 'Obtenir le Framework'
+    cta: {
+      label: 'Accéder en avant-première',
+      href: '#'
+    },
+    ctaNote: 'Présentement en construction. Première cohorte : places limitées.'
   },
   sections: {
     problem: {

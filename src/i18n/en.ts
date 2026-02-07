@@ -15,37 +15,37 @@ export const en = {
       href: '#projects'
     }
   },
-  coreThesis: {
-    title: 'The 11% Problem',
-    lines: [
-      'Most AI adoption fails. Not because of bad models—because of bad architecture.',
-      '<highlight>71%</highlight> of businesses experiment with AI agents. Only <highlight>11%</highlight> reach production.',
-      "The gap isn't intelligence. It's structure.",
-      "I build the meta-layer that bridges that gap: research-backed systems that don't break, content architectures that don't sound like AI slop, and frameworks that run without constant babysitting.",
-      'This is Meta Architecture.'
-    ]
-  },
-  productTeaser: {
-    title: 'The Framework',
-    subtitle: 'The Intelligence File System',
-    description: 'How I generate 10+ high-quality content assets from a single research session.',
-    detail: "This isn't a prompt collection. It's a knowledge architecture:",
-    stages: [
+  contentEngine: {
+    label: 'THE SYSTEM',
+    title: 'Content that sounds like you. At scale.',
+    subtitle: "Most AI content reads like AI content. Yours won't.",
+    outcomes: [
+      'One research session.',
+      'One structured intelligence file.',
+      '10+ platform-ready posts — each one unmistakably yours.'
+    ],
+    cards: [
       {
-        title: 'Stage 1',
-        description: 'Research Agent (Web scraping + evidence extraction)'
+        label: 'RESEARCH',
+        title: 'Deep Context',
+        body: 'Your topic, dissected through the lens of your brand, your audience, and what actually earns attention — not generic summaries.'
       },
       {
-        title: 'Stage 2',
-        description: 'Intelligence File (Structured JSON schema for reusable facts)'
+        label: 'STRUCTURE',
+        title: 'Intelligence Architecture',
+        body: 'Every angle, intent, and insight mapped into a reusable knowledge layer. One session of thinking, compounding returns.'
       },
       {
-        title: 'Stage 3',
-        description: "Content Generator (Platform-specific output that doesn't sound like ChatGPT)"
+        label: 'OUTPUT',
+        title: 'Platform-Native Content',
+        body: "Posts engineered for each platform's algorithm and culture. LinkedIn authority. Twitter brevity. Newsletter depth. No copy-paste, no AI smell."
       }
     ],
-    leverage: 'One research session → One Intelligence File → Unlimited leverage.',
-    cta: 'Get the Framework'
+    cta: {
+      label: 'Join the Early Access',
+      href: '#'
+    },
+    ctaNote: 'Currently in private build. First cohort: limited spots.'
   },
   sections: {
     problem: {
