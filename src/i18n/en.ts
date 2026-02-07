@@ -16,7 +16,6 @@ export const en = {
     }
   },
   contentEngine: {
-    label: 'THE SYSTEM',
     title: 'Content that sounds like you. At scale.',
     subtitle: "Most AI content reads like AI content. Yours won't.",
     outcomes: [

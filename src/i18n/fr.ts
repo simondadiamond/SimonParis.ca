@@ -17,7 +17,6 @@ const fr: TranslationKeys = {
     }
   },
   contentEngine: {
-    label: 'LE SYSTÈME',
     title: 'Du contenu qui sonne comme vous. À grande échelle.',
     subtitle: 'La plupart du contenu IA se lit comme du contenu IA. Pas le vôtre.',
     outcomes: [

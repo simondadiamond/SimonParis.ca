@@ -58,9 +58,6 @@ const ContentEngine = () => {
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <div className="border border-[#333333] bg-[#111111] px-6 py-10 text-center sm:px-8 lg:px-12">
           <div className="mx-auto max-w-3xl space-y-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#B4B4B4] font-mono">
-              {t.contentEngine.label}
-            </p>
             <h2 className="text-balance text-2xl font-semibold text-[#EAEAEA] md:text-3xl">
               {t.contentEngine.title}
             </h2>
