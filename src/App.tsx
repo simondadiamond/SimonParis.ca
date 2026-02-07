@@ -18,6 +18,30 @@ const Link: React.FC<{ href: string; children: React.ReactNode }> = ({ href, chi
   </a>
 );
 
+const CoreThesis = () => {
+  const { t } = useLanguage();
+  const coreThesis = t.coreThesis;
+
+  const highlightNumbers = (value: string) =>
+    value.replace(/(11%|71%)/g, '<span class="text-[#E04500] font-semibold">$1</span>');
+
+  return (
+    <section className="bg-[#0f0f0f] py-20 lg:py-24">
+      <div className="mx-auto max-w-4xl px-6 text-center">
+        <h2 className="text-balance text-3xl font-semibold text-[#EAEAEA] md:text-4xl">
+          {coreThesis.title}
+        </h2>
+        <div className="mt-6 space-y-4 text-base leading-relaxed text-[#B4B4B4] md:text-lg">
+          {coreThesis.body.map((line: string, index: number) => (
+            <p key={`${line}-${index}`} dangerouslySetInnerHTML={{ __html: highlightNumbers(line) }} />
+          ))}
+        </div>
+        <hr className="mt-12 border-t border-[#1f1f1f]" />
+      </div>
+    </section>
+  );
+};
+
 // Hero Component
 const Hero = () => {
   const { t } = useLanguage();
@@ -42,6 +66,65 @@ const Hero = () => {
           <div className="mt-[1.5em] flex w-full max-w-xs flex-col items-center gap-3 sm:max-w-sm">
             <a href={hero.cta.href} className="btn-primary hero-cta w-full max-w-xs sm:max-w-none sm:w-auto">
               {hero.cta.label}
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const ProductTeaser = () => {
+  const { t } = useLanguage();
+  const product = t.productTeaser;
+
+  return (
+    <section className="relative bg-[#0f0f0f] py-20 text-[#EAEAEA] lg:py-24">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="border border-[#333333] bg-[#111111] px-6 py-10 sm:px-10 sm:py-12 lg:px-12">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#B4B4B4] font-mono">
+              {product.eyebrow}
+            </p>
+            <h2 className="mt-3 text-balance text-3xl font-semibold text-[#EAEAEA] md:text-4xl">
+              {product.title}
+            </h2>
+            <h3 className="mt-4 text-balance text-xl font-semibold text-[#EAEAEA] md:text-2xl">
+              {product.subtitle}
+            </h3>
+            <p className="mt-4 text-base leading-relaxed text-[#B4B4B4] md:text-lg">
+              {product.description}
+            </p>
+            <p className="mt-4 text-base leading-relaxed text-[#B4B4B4] md:text-lg">
+              {product.note}
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-4 md:grid-cols-3">
+            {product.stages.map((stage: { title: string; description: string }, index: number) => (
+              <div
+                key={`${stage.title}-${index}`}
+                className="border border-[#333333] bg-[#0f0f0f] p-5 text-left"
+              >
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#E04500] font-mono">
+                  {stage.title}
+                </p>
+                <p className="mt-3 text-sm leading-relaxed text-[#B4B4B4]">{stage.description}</p>
+              </div>
+            ))}
+          </div>
+
+          <p className="mt-8 text-center text-base leading-relaxed text-[#B4B4B4] md:text-lg">
+            {product.summary}
+          </p>
+
+          <div className="mt-8 flex justify-center">
+            <a
+              href={product.cta.href}
+              className="btn-primary opacity-60 pointer-events-none"
+              aria-disabled="true"
+            >
+              {product.cta.label}
             </a>
           </div>
         </div>
@@ -379,8 +462,10 @@ function App() {
     <div className="min-h-screen">
       <Navbar />
       <Hero />
+      <CoreThesis />
       <PartnerBar />
       <ProofLab />
+      <ProductTeaser />
       {/* <OfferCards /> */}
       {/* <ROIMath /> */}
       {/* <Checklist /> */}

@@ -15,6 +15,16 @@ export const en = {
       href: '#projects'
     }
   },
+  coreThesis: {
+    title: 'The 11% Problem',
+    body: [
+      'Most AI adoption fails. Not because of bad models\u2014because of bad architecture.',
+      '71% of businesses experiment with AI agents. Only 11% reach production.',
+      'The gap isn\u2019t intelligence. It\u2019s structure.',
+      'I build the meta-layer that bridges that gap: research-backed systems that don\u2019t break, content architectures that don\u2019t sound like AI slop, and frameworks that run without constant babysitting.',
+      'This is Meta Architecture.'
+    ]
+  },
   sections: {
     problem: {
       heading:
@@ -111,6 +121,32 @@ export const en = {
         image: null as { src: string; alt: string } | null
       }
     ]
+  },
+  productTeaser: {
+    eyebrow: 'The Framework',
+    title: 'The Framework',
+    subtitle: 'The Intelligence File System',
+    description: 'How I generate 10+ high-quality content assets from a single research session.',
+    note: 'This isn\u2019t a prompt collection. It\u2019s a knowledge architecture:',
+    stages: [
+      {
+        title: 'Stage 1',
+        description: 'Research Agent (Web scraping + evidence extraction)'
+      },
+      {
+        title: 'Stage 2',
+        description: 'Intelligence File (Structured JSON schema for reusable facts)'
+      },
+      {
+        title: 'Stage 3',
+        description: 'Content Generator (Platform-specific output that doesn\u2019t sound like ChatGPT)'
+      }
+    ],
+    summary: 'One research session \u2192 One Intelligence File \u2192 Unlimited leverage.',
+    cta: {
+      label: 'Get the Framework',
+      href: '#'
+    }
   },
   growth: {
     title: 'The <span class="accent">growth engine</span> for your business: simple, bilingual, compliant.',
