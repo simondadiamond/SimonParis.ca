@@ -16,6 +16,16 @@ const fr: TranslationKeys = {
       href: '#projects'
     }
   },
+  coreThesis: {
+    title: 'Le Problème du 11%',
+    body: [
+      'La plupart des adoptions d’IA échouent. Pas à cause des modèles—à cause de l’architecture.',
+      '71% des entreprises expérimentent avec des agents IA. Seulement 11% atteignent la production.',
+      'L’écart n’est pas l’intelligence. C’est la structure.',
+      'Je construis la méta-couche qui comble cet écart : des systèmes basés sur la recherche qui ne cassent pas, des architectures de contenu qui ne sonnent pas comme du spam IA, et des frameworks qui fonctionnent sans supervision constante.',
+      'C’est la Méta-Architecture.'
+    ]
+  },
   sections: {
     problem: {
       heading:
@@ -114,6 +124,32 @@ const fr: TranslationKeys = {
         image: null as { src: string; alt: string } | null
       }
     ]
+  },
+  productTeaser: {
+    eyebrow: 'Le Framework',
+    title: 'Le Framework',
+    subtitle: 'Le Système de Fichiers d’Intelligence',
+    description: 'Comment je génère plus de 10 actifs de contenu de haute qualité à partir d’une seule session de recherche.',
+    note: 'Ce n’est pas une collection de prompts. C’est une architecture de connaissances :',
+    stages: [
+      {
+        title: 'Étape 1',
+        description: 'Agent de Recherche (Web scraping + extraction de preuves)'
+      },
+      {
+        title: 'Étape 2',
+        description: 'Fichier d’Intelligence (Schéma JSON structuré pour des faits réutilisables)'
+      },
+      {
+        title: 'Étape 3',
+        description: 'Générateur de Contenu (Sortie spécifique à la plateforme qui ne sonne pas comme ChatGPT)'
+      }
+    ],
+    summary: 'Une session de recherche \u2192 Un Fichier d’Intelligence \u2192 Effet de levier illimité.',
+    cta: {
+      label: 'Obtenir le Framework',
+      href: '#'
+    }
   },
   growth: {
     title: 'Des <span class="accent">automatisations prêtes</span> pour faire croître votre entreprise.',
