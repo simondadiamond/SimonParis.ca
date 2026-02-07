@@ -16,6 +16,35 @@ const fr: TranslationKeys = {
       href: '#projects'
     }
   },
+  contentEngine: {
+    title: 'Du contenu qui sonne comme vous. À grande échelle.',
+    subtitle: 'La plupart du contenu IA se lit comme du contenu IA. Pas le vôtre.',
+    outcomes: [
+      'Une session de recherche. Des publications illimitées — chacune indéniablement la vôtre.'
+    ],
+    cards: [
+      {
+        label: 'RECHERCHE',
+        title: 'Contexte en profondeur',
+        body: "Votre sujet, décortiqué à travers le prisme de votre marque, votre audience et ce qui capte réellement l'attention — pas des résumés génériques."
+      },
+      {
+        label: 'STRUCTURE',
+        title: "Architecture d'intelligence",
+        body: "Chaque angle, intention et insight cartographié dans une couche de savoir réutilisable. Une session de réflexion, des rendements composés."
+      },
+      {
+        label: 'OUTPUT',
+        title: 'Contenu natif par plateforme',
+        body: "Conçu pour l'algorithme et la culture de chaque plateforme. Pas du copier-coller. Pas du contenu IA générique."
+      }
+    ],
+    cta: {
+      label: 'Accéder en avant-première',
+      href: '#'
+    },
+    ctaNote: 'Présentement en construction. Première cohorte : places limitées.'
+  },
   sections: {
     problem: {
       heading:

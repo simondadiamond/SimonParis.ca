@@ -15,6 +15,35 @@ export const en = {
       href: '#projects'
     }
   },
+  contentEngine: {
+    title: 'Content that sounds like you. At scale.',
+    subtitle: "Most AI content reads like AI content. Yours won't.",
+    outcomes: [
+      'One research session. Unlimited platform-ready posts — each one unmistakably yours.'
+    ],
+    cards: [
+      {
+        label: 'RESEARCH',
+        title: 'Deep Context',
+        body: 'Your topic, dissected through the lens of your brand, your audience, and what actually earns attention — not generic summaries.'
+      },
+      {
+        label: 'STRUCTURE',
+        title: 'Intelligence Architecture',
+        body: 'Every angle, intent, and insight mapped into a reusable knowledge layer. One session of thinking, compounding returns.'
+      },
+      {
+        label: 'OUTPUT',
+        title: 'Platform-Native Content',
+        body: "Engineered for each platform's algorithm and culture. Not copy-paste. Not AI slop."
+      }
+    ],
+    cta: {
+      label: 'Join the Early Access',
+      href: '#'
+    },
+    ctaNote: 'Currently in private build. First cohort: limited spots.'
+  },
   sections: {
     problem: {
       heading:

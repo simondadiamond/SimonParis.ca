@@ -50,6 +50,49 @@ const Hero = () => {
   );
 };
 
+const ContentEngine = () => {
+  const { t } = useLanguage();
+
+  return (
+    <section className="relative bg-[#0f0f0f] py-20 text-[#EAEAEA] sm:py-24">
+      <div className="mx-auto max-w-6xl px-6 lg:px-8">
+        <div className="border border-[#333333] bg-[#111111] px-6 py-10 text-center sm:px-8 lg:px-12">
+          <div className="mx-auto max-w-3xl space-y-4">
+            <h2 className="text-balance text-2xl font-semibold text-[#EAEAEA] md:text-3xl">
+              {t.contentEngine.title}
+            </h2>
+            <p className="text-base text-[#EAEAEA] md:text-lg">{t.contentEngine.subtitle}</p>
+            <div className="space-y-4 pt-2 text-base leading-relaxed text-[#B4B4B4] md:text-lg">
+              {t.contentEngine.outcomes.map((outcome: string) => (
+                <p key={outcome}>{outcome}</p>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-10 grid gap-4 md:grid-cols-3">
+            {t.contentEngine.cards.map((card: { label: string; title: string; body: string }) => (
+              <div key={card.title} className="border border-[#333333] bg-[#0f0f0f] p-5 text-center">
+                <h4 className="text-sm font-semibold uppercase tracking-[0.12em] text-[#E04500] font-mono">
+                  {card.label}
+                </h4>
+                <h3 className="mt-3 text-lg font-semibold text-[#EAEAEA]">{card.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-[#B4B4B4] md:text-base">{card.body}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-8 flex flex-col items-center">
+            <a href={t.contentEngine.cta.href} className="btn-primary">
+              {t.contentEngine.cta.label}
+            </a>
+            <p className="mt-3 text-sm text-[#B4B4B4]">{t.contentEngine.ctaNote}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
 // Proof Lab Component
 const ProofLab = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -381,6 +424,7 @@ function App() {
       <Hero />
       <PartnerBar />
       <ProofLab />
+      <ContentEngine />
       {/* <OfferCards /> */}
       {/* <ROIMath /> */}
       {/* <Checklist /> */}
