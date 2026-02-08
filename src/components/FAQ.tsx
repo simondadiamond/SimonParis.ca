@@ -110,7 +110,7 @@ const FAQ: React.FC = () => {
               >
                 <button
                   type="button"
-                  className="flex w-full items-center justify-between px-6 py-4 text-left transition-colors duration-200 hover:text-[#FF4F00] focus-visible:text-[#FF4F00] md:px-8 md:py-5"
+                  className="flex w-full items-center justify-between px-6 py-4 text-left transition-colors duration-200 hover:text-[#FF5A1A] focus-visible:text-[#E04500] md:px-8 md:py-5"
                   onClick={() => setOpenIndex(isOpen ? null : index)}
                   aria-expanded={isOpen}
                   aria-controls={`faq-panel-${index}`}
@@ -119,9 +119,9 @@ const FAQ: React.FC = () => {
                     {item.question}
                   </span>
                   {isOpen ? (
-                    <ChevronUp className="h-6 w-6 text-[#FF4F00]" />
+                    <ChevronUp className="h-6 w-6 text-[#E04500]" />
                   ) : (
-                    <ChevronDown className="h-6 w-6 text-[#FF4F00]" />
+                    <ChevronDown className="h-6 w-6 text-[#E04500]" />
                   )}
                 </button>
 

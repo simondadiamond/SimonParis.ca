@@ -96,11 +96,11 @@ const getFormHtml = (lang: 'fr' | 'en', sourceUrl: string) => {
 
 
   return `
-<div class="sib-form" style="text-align: center; /* background-color: #121c2d; REMOVED to allow CSS to control background */">
+<div class="sib-form" style="text-align: center;">
   <div id="sib-form-container" class="sib-form-container">
-    <div id="error-message" class="sib-form-message-panel" style="font-size:16px; text-align:left; font-family:Inter, sans-serif; color:#ffb3a0; background-color:#0f0f0f; border-radius:0px; border-color:#ff4f00; max-width:540px; display:none;">
+    <div id="error-message" class="sib-form-message-panel" style="font-size:16px; text-align:left; font-family:Inter, sans-serif; color:#F85149; background-color:#0f0f0f; border-radius:0px; border-color:#F85149; max-width:540px; display:none;">
     </div>
-    <div id="success-message" class="sib-form-message-panel" style="font-size:16px; text-align:left; font-family:Inter, sans-serif; color:#9fe6c1; background-color:#0f0f0f; border-radius:0px; border-color:#2f9d5a; max-width:540px; display:none;">
+    <div id="success-message" class="sib-form-message-panel" style="font-size:16px; text-align:left; font-family:Inter, sans-serif; color:#EAEAEA; background-color:#0f0f0f; border-radius:0px; border-color:#E04500; max-width:540px; display:none;">
     </div>
 
     <div id="sib-container" class="sib-container--large sib-container--vertical" style="text-align:center; background-color:#0f0f0f; max-width:540px; border-radius:0px; border-width:1px; border-color:#333333; border-style:solid; direction:ltr">
@@ -115,7 +115,7 @@ const getFormHtml = (lang: 'fr' | 'en', sourceUrl: string) => {
         </div>
 
         <div style="padding: 16px 0 8px 0;">
-          <div class="sib-form-block" style="font-size:19px; text-align:center; font-family:Roboto Mono, monospace; color:#FF4F00; background-color:transparent; text-align:center">
+          <div class="sib-form-block" style="font-size:19px; text-align:center; font-family:Roboto Mono, monospace; color:#E04500; background-color:transparent; text-align:center">
             <div class="sib-text-form-block">
               <p><strong>${text.tagline}</strong></p>
             </div>
@@ -144,7 +144,7 @@ const getFormHtml = (lang: 'fr' | 'en', sourceUrl: string) => {
                   <input class="input" type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="${lang === 'fr' ? 'nom@entreprise.com' : 'name@business.com'}" data-required="true" required />
                 </div>
               </div>
-              <label class="entry__error entry__error--primary" style="font-size:16px; text-align:left; font-family:Inter, sans-serif; color:#ffb3a0; background-color:#0f0f0f; border-radius:0px; border-color:#ff4f00;"></label>
+              <label class="entry__error entry__error--primary" style="font-size:16px; text-align:left; font-family:Inter, sans-serif; color:#F85149; background-color:#0f0f0f; border-radius:0px; border-color:#F85149;"></label>
             </div>
           </div>
         </div>
@@ -164,7 +164,7 @@ const getFormHtml = (lang: 'fr' | 'en', sourceUrl: string) => {
                   </label>
                 </div>
               </div>
-              <label class="entry__error entry__error--primary" style="font-size:16px; text-align:left; font-family:Inter, sans-serif; color:#ffb3a0; background-color:#0f0f0f; border-radius:0px; border-color:#ff4f00;"></label>
+              <label class="entry__error entry__error--primary" style="font-size:16px; text-align:left; font-family:Inter, sans-serif; color:#F85149; background-color:#0f0f0f; border-radius:0px; border-color:#F85149;"></label>
               <label class="entry__specification" style="font-size:12px; text-align:left; font-family:Inter, webFonts; color:#B4B4B4;">
                 ${text.unsubscribe}
               </label>
@@ -174,7 +174,7 @@ const getFormHtml = (lang: 'fr' | 'en', sourceUrl: string) => {
 
         <div style="padding: 20px 0;">
           <div class="sib-form-block" style="text-align: center">
-            <button class="sib-form-block__button sib-form-block__button-with-loader" style="font-size:16px; text-align:center; font-weight:700; font-family:Inter, webFonts; color:#0f0f0f; background-color:#FF4F00; border-radius:0px; border-width:1px; border-color:#FF4F00;" form="sib-form" type="submit">
+            <button class="sib-form-block__button sib-form-block__button-with-loader" style="font-size:16px; text-align:center; font-weight:700; font-family:Inter, webFonts; color:#0f0f0f; background-color:#E04500; border-radius:0px; border-width:1px; border-color:#E04500;" form="sib-form" type="submit">
               <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512" style="vertical-align:middle; margin-right:6px; height:14px; width:14px;">
                 <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z"/>
               </svg>
@@ -331,7 +331,7 @@ const SignupForm: React.FC = () => {
           }
           /* Add a subtle focus style */
           #sib-container .input:focus {
-             border-color: #FF4F00 !important; /* Accent on focus */
+             border-color: #E04500 !important; /* Accent on focus */
              box-shadow: none !important;
              outline: none !important;
           }
@@ -352,7 +352,7 @@ const SignupForm: React.FC = () => {
             /* Set font and color for a clean inline look */
             font-size: 14px !important;
             font-weight: 500 !important;
-            color: #ffb3a0 !important;
+            color: #F85149 !important;
             text-align: left !important;
             
             /* Reduce unnecessary top/bottom padding/margin on the error elements themselves */
@@ -372,27 +372,27 @@ const SignupForm: React.FC = () => {
           
           /* Error Message Panel */
           #error-message {
-            border: 1px solid #ff4f00 !important;
+            border: 1px solid #F85149 !important;
             background-color: #0f0f0f !important;
-            color: #ffb3a0 !important;
+            color: #F85149 !important;
           }
           
           /* Success Message Panel (Added for visual consistency) */
           #success-message {
-            border: 1px solid #2f9d5a !important;
+            border: 1px solid #E04500 !important;
             background-color: #0f0f0f !important;
-            color: #9fe6c1 !important;
+            color: #EAEAEA !important;
           }
 
 
           /* Button Styling */
           .sib-form-block__button {
-            background: #FF4F00 !important;
+            background: #E04500 !important;
             /* Enhanced Aesthetics */
             width: 100% !important; /* Make it full width */
             padding: 14px 24px !important;
             font-size: 18px !important;
-            border: 1px solid #FF4F00 !important;
+            border: 1px solid #E04500 !important;
             border-radius: 0px !important;
             transition: opacity 0.2s !important;
             box-shadow: none !important;
@@ -400,7 +400,7 @@ const SignupForm: React.FC = () => {
           }
           
           .sib-form-block__button:hover {
-             opacity: 0.9 !important;
+             background: #FF5A1A !important;
           }
 
           .sib-form-block__button:active {

@@ -149,7 +149,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ slug }) => {
   const nextCaseStudyClasses = [
     'mt-12 block border border-[#333333]',
     'bg-transparent p-8 transition-colors duration-200',
-    'hover:border-[#FF4F00]',
+    'hover:border-[#FF5A1A]',
   ].join(' ');
 
   useEffect(() => {
@@ -160,7 +160,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ slug }) => {
     return (
       <div className="flex min-h-screen items-center justify-center bg-[#0f0f0f] text-[#EAEAEA]">
         <div className="flex flex-col items-center gap-4">
-          <div className="h-14 w-14 animate-spin rounded-full border-4 border-[#333333] border-t-[#FF4F00]" />
+          <div className="h-14 w-14 animate-spin rounded-full border-4 border-[#333333] border-t-[#E04500]" />
           <p className="text-[#B4B4B4]">Loading project...</p>
         </div>
       </div>
@@ -208,7 +208,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ slug }) => {
         <div className="relative z-10 mx-auto max-w-6xl px-6 pb-16 pt-28 lg:pb-24 lg:pt-36">
           <a
             href="/#projects"
-            className="mb-6 inline-flex items-center gap-2 pb-6 text-xs font-bold uppercase tracking-[0.24em] text-[#B4B4B4] transition-colors hover:text-[#FF4F00] font-mono"
+            className="mb-6 inline-flex items-center gap-2 pb-6 text-xs font-bold uppercase tracking-[0.24em] text-[#B4B4B4] transition-colors hover:text-[#FF5A1A] font-mono"
           >
             <ChevronLeft className="h-4 w-4" aria-hidden />
             Back to Projects
@@ -253,7 +253,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ slug }) => {
                       type="button"
                       aria-label="Previous image"
                       onClick={() => setCurrentHeroIndex((prev) => (prev - 1 + heroImages.length) % heroImages.length)}
-                      className="absolute left-4 top-1/2 -translate-y-1/2 border border-[#333333] bg-[#0f0f0f] p-2 text-[#EAEAEA] transition hover:border-[#FF4F00] focus:outline-none focus:ring-2 focus:ring-[#FF4F00]"
+                      className="absolute left-4 top-1/2 -translate-y-1/2 border border-[#333333] bg-[#0f0f0f] p-2 text-[#EAEAEA] transition hover:border-[#FF5A1A] focus:outline-none focus:ring-2 focus:ring-[#E04500]"
                     >
                       <ChevronLeft className="h-5 w-5" />
                     </button>
@@ -261,7 +261,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ slug }) => {
                       type="button"
                       aria-label="Next image"
                       onClick={() => setCurrentHeroIndex((prev) => (prev + 1) % heroImages.length)}
-                      className="absolute right-4 top-1/2 -translate-y-1/2 border border-[#333333] bg-[#0f0f0f] p-2 text-[#EAEAEA] transition hover:border-[#FF4F00] focus:outline-none focus:ring-2 focus:ring-[#FF4F00]"
+                      className="absolute right-4 top-1/2 -translate-y-1/2 border border-[#333333] bg-[#0f0f0f] p-2 text-[#EAEAEA] transition hover:border-[#FF5A1A] focus:outline-none focus:ring-2 focus:ring-[#E04500]"
                     >
                       <ChevronRight className="h-5 w-5" />
                     </button>
@@ -269,7 +269,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ slug }) => {
                       {heroImages.map((_, index) => (
                         <span
                           key={`hero-dot-${index}`}
-                          className={`h-2.5 w-2.5 transition ${index === currentHeroIndex ? 'bg-[#FF4F00]' : 'bg-[#333333]'}`}
+                          className={`h-2.5 w-2.5 transition ${index === currentHeroIndex ? 'bg-[#E04500]' : 'bg-[#333333]'}`}
                         />
                       ))}
                     </div>
@@ -356,7 +356,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ slug }) => {
           {outcomes.length > 0 && (
             <div className="mt-10 border border-[#333333] bg-transparent px-6 py-6">
               <div className="flex items-center gap-2 text-base font-semibold text-[#EAEAEA] md:text-lg">
-                <CheckCircle className="h-5 w-5 text-[#FF4F00]" aria-hidden />
+                <CheckCircle className="h-5 w-5 text-[#E04500]" aria-hidden />
                 <h2 className="text-lg md:text-xl">Key Outcomes</h2>
               </div>
               <div className="mt-5 grid grid-cols-1 gap-4 md:grid-cols-3">
@@ -365,7 +365,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ slug }) => {
                     key={index}
                     className="flex h-full items-start gap-3 border border-[#333333] px-5 py-4"
                   >
-                    <div className="mt-1 flex h-7 w-7 shrink-0 items-center justify-center border border-[#333333] text-[#FF4F00]">
+                    <div className="mt-1 flex h-7 w-7 shrink-0 items-center justify-center border border-[#333333] text-[#E04500]">
                       <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                       </svg>
@@ -384,11 +384,11 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ slug }) => {
             >
               <div className="flex items-center justify-between gap-4">
                 <div>
-                  <p className="text-sm uppercase tracking-[0.2em] text-[#FF4F00] font-mono">Next Case Study</p>
+                  <p className="text-sm uppercase tracking-[0.2em] text-[#E04500] font-mono">Next Case Study</p>
                   <h3 className="mt-2 text-2xl font-semibold text-[#EAEAEA]">{nextProject.title}</h3>
                   <p className="mt-1 text-[#B4B4B4]">{nextProject.tagline}</p>
                 </div>
-                <div className="flex h-12 w-12 items-center justify-center border border-[#333333] text-[#FF4F00]">
+                <div className="flex h-12 w-12 items-center justify-center border border-[#333333] text-[#E04500]">
                   <ArrowRight className="h-6 w-6" />
                 </div>
               </div>

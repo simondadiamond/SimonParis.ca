@@ -56,7 +56,7 @@ const ContentEngine = () => {
   return (
     <section className="relative bg-[#0f0f0f] py-20 text-[#EAEAEA] sm:py-24">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
-        <div className="border border-[#333333] bg-[#111111] px-6 py-10 text-center sm:px-8 lg:px-12">
+        <div className="border border-[#333333] bg-[#1A1A1A] px-6 py-10 text-center sm:px-8 lg:px-12">
           <div className="mx-auto max-w-3xl space-y-4">
             <h2 className="text-balance text-2xl font-semibold text-[#EAEAEA] md:text-3xl">
               {t.contentEngine.title}
@@ -137,8 +137,8 @@ const ProofLab = () => {
 
   const formatHighlight = (value: string) =>
     value
-      .replace(/<highlight>(.*?)<\/highlight>/g, '<span class="text-[#FF4F00] font-semibold">$1</span>')
-      .replace(/<mark>(.*?)<\/mark>/g, '<span class="text-[#FF4F00] font-semibold">$1</span>');
+      .replace(/<highlight>(.*?)<\/highlight>/g, '<span class="text-[#E04500] font-semibold">$1</span>')
+      .replace(/<mark>(.*?)<\/mark>/g, '<span class="text-[#E04500] font-semibold">$1</span>');
 
   const headingHtml = formatHighlight(t.proofLab.title);
 
@@ -194,7 +194,7 @@ const ProofLab = () => {
         >
           {loading && skeletonCards}
           {!loading && projects.length === 0 && !error && (
-            <div className="col-span-full text-center text-gray-300">No projects available at the moment.</div>
+            <div className="col-span-full text-center text-[#B4B4B4]">No projects available at the moment.</div>
           )}
           {!loading && error && (
             <div className="col-span-full text-center text-red-400">Unable to load projects.</div>
@@ -225,7 +225,7 @@ const ProofLab = () => {
                   <div className="flex flex-1 flex-col gap-4 px-6 pb-7 pt-6 md:px-7 md:pt-7">
                     <div className="flex items-start justify-between gap-3">
                       <h3 className="text-[19px] font-semibold text-[#EAEAEA]">{project.title}</h3>
-                      <span className="border border-[#333333] px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[#FF4F00] font-mono">
+                      <span className="border border-[#333333] px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[#E04500] font-mono">
                         {project.status}
                       </span>
                     </div>
@@ -300,7 +300,7 @@ const OfferCards = () => {
               className="relative flex h-full flex-col border border-[#333333] bg-transparent p-6 transition-all duration-300 ease-out md:p-8"
             >
               {offer.badge && (
-                <span className="absolute right-4 top-4 border border-[#333333] px-2 py-1 text-xs font-semibold text-[#FF4F00] font-mono uppercase tracking-[0.12em]">
+                <span className="absolute right-4 top-4 border border-[#333333] px-2 py-1 text-xs font-semibold text-[#E04500] font-mono uppercase tracking-[0.12em]">
                   {offer.badge}
                 </span>
               )}
@@ -384,7 +384,7 @@ const Checklist = () => {
       <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8">
         <div className="border border-[#333333] p-6 text-center md:p-8">
           <div className="mb-4 inline-flex items-center text-sm font-medium text-[#B4B4B4] font-mono uppercase tracking-[0.12em]">
-            <Shield className="mr-2 h-5 w-5 text-[#FF4F00]" />
+            <Shield className="mr-2 h-5 w-5 text-[#E04500]" />
             <span>{t.checklist.eyebrow}</span>
           </div>
           <h3
@@ -395,7 +395,7 @@ const Checklist = () => {
           <ul className="mb-6 space-y-2 text-left text-[#B4B4B4]">
             {t.checklist.points.map((p: string, i: number) => (
               <li key={i} className="flex items-start">
-                <CheckCircle className="mr-2 mt-1 h-4 w-4 flex-shrink-0 text-[#FF4F00]" />
+                <CheckCircle className="mr-2 mt-1 h-4 w-4 flex-shrink-0 text-[#E04500]" />
                 <span dangerouslySetInnerHTML={{ __html: p }} />
               </li>
             ))}

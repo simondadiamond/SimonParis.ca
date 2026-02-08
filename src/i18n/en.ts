@@ -47,7 +47,7 @@ export const en = {
   sections: {
     problem: {
       heading:
-        'I\'ve lived the chaos — and know <span style="color:#13A89E;">why it keeps you stuck</span>.',
+        'I\'ve lived the chaos — and know <span style="color:#E04500;">why it keeps you stuck</span>.',
       subheading:
         'Québec SMBs lose hours every week managing admin, chasing clients, and scrambling for compliance. I help owners clear these roadblocks — one intelligent system at a time. Here are the most common ones I see:',
       cards: [

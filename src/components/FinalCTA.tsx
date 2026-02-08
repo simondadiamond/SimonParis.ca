@@ -48,20 +48,20 @@ const FinalCTA: React.FC = () => {
         <div className="mt-16 flex flex-col items-center gap-2 text-sm text-[#B4B4B4] sm:flex-row sm:justify-between">
           <span className="text-center sm:text-left">© 2025 Simon Paris</span>
           <div className="flex flex-col items-center gap-3 sm:flex-row sm:gap-6">
-            <a href="/privacy" className="transition hover:text-[#FF4F00]">
+            <a href="/privacy" className="text-[#2280FF] transition hover:underline">
               {privacyLabel}
             </a>
             <div className="flex items-center gap-2 text-[#B4B4B4] font-mono">
               <a
                 href="/fr"
-                className={`transition hover:text-[#FF4F00] ${lang === 'fr' ? 'text-[#EAEAEA]' : 'text-[#B4B4B4]'}`}
+                className={`transition hover:text-[#FF5A1A] ${lang === 'fr' ? 'text-[#EAEAEA]' : 'text-[#B4B4B4]'}`}
               >
                 FR
               </a>
               <span className="text-[#333333]">|</span>
               <a
                 href="/en"
-                className={`transition hover:text-[#FF4F00] ${lang === 'en' ? 'text-[#EAEAEA]' : 'text-[#B4B4B4]'}`}
+                className={`transition hover:text-[#FF5A1A] ${lang === 'en' ? 'text-[#EAEAEA]' : 'text-[#B4B4B4]'}`}
               >
                 EN
               </a>

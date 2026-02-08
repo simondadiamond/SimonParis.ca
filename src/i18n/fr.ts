@@ -48,7 +48,7 @@ const fr: TranslationKeys = {
   sections: {
     problem: {
       heading:
-        'J\'ai connu le chaos — et je sais <span style="color:#13A89E;">pourquoi ça bloque</span>.',
+        'J\'ai connu le chaos — et je sais <span style="color:#E04500;">pourquoi ça bloque</span>.',
       subheading:
         'Chaque semaine, les PME du Québec perdent des heures à gérer la paperasse, relancer les clients et courir après la conformité. J\'aide les dirigeants à éliminer ces blocages — un système intelligent à la fois. Voici les plus fréquents :',
       cards: [

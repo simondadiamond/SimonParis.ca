@@ -22,7 +22,7 @@ const PolitiqueConfidentialite = () => {
         <p className="mb-6 text-[0.9rem] md:text-base text-[#B4B4B4] leading-relaxed">
           <strong>Responsable:</strong> Simon Paris (entrepreneur individuel)<br />
           <strong>Adresse:</strong> 1234 Rue Exemple, Québec (QC) G1A 0A0<br />
-          <strong>Courriel:</strong> <a href="mailto:privacy@simonparis.ca" className="text-[#FF4F00] hover:underline">privacy@simonparis.ca</a>
+          <strong>Courriel:</strong> <a href="mailto:privacy@simonparis.ca" className="text-[#2280FF] hover:underline">privacy@simonparis.ca</a>
         </p>
 
         <h2 className="text-xl md:text-2xl font-semibold text-[#EAEAEA] mb-4 mt-8">2. Données collectées</h2>
@@ -68,7 +68,7 @@ const PolitiqueConfidentialite = () => {
 
         <h2 className="text-xl md:text-2xl font-semibold text-[#EAEAEA] mb-4 mt-8">5. Vos Droits</h2>
         <p className="mb-6 text-[0.9rem] md:text-base text-[#B4B4B4] leading-relaxed">
-          Vous pouvez accéder, corriger ou effacer vos données à tout moment. Pour exercer vos droits : <a href="mailto:privacy@simonparis.ca" className="text-[#FF4F00] hover:underline">privacy@simonparis.ca</a>. Vous pouvez aussi déposer une plainte auprès de la CAI QC.
+          Vous pouvez accéder, corriger ou effacer vos données à tout moment. Pour exercer vos droits : <a href="mailto:privacy@simonparis.ca" className="text-[#2280FF] hover:underline">privacy@simonparis.ca</a>. Vous pouvez aussi déposer une plainte auprès de la CAI QC.
         </p>
 
         <h2 className="text-xl md:text-2xl font-semibold text-[#EAEAEA] mb-4 mt-8">6. Cookies &amp; Suivi</h2>
