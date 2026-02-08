@@ -175,14 +175,14 @@ const LandingFAQ: React.FC<{ title: string; intro: string; items: { q: string; a
           {items.map((qa, i) => (
             <div key={i} className="card-light overflow-hidden">
               <button
-                className="w-full flex justify-between items-center px-6 py-3 md:py-4 text-left hover:border-[#FF4F00] transition-colors"
+                className="w-full flex justify-between items-center px-6 py-3 md:py-4 text-left hover:border-[#FF5A1A] transition-colors"
                 onClick={() => setOpen(open === i ? null : i)}
               >
                 <span className="text-lg font-semibold text-[#EAEAEA]">{qa.q}</span>
                 {open === i ? (
-                  <ChevronUp className="w-6 h-6 text-[#FF4F00]" />
+                  <ChevronUp className="w-6 h-6 text-[#E04500]" />
                 ) : (
-                  <ChevronDown className="w-6 h-6 text-[#FF4F00]" />
+                  <ChevronDown className="w-6 h-6 text-[#E04500]" />
                 )}
               </button>
               <div
@@ -230,7 +230,7 @@ const Landing: React.FC<{ lang: Lang }> = ({ lang }) => {
                   const Icon = bulletIcons[i];
                   return (
                     <li key={i} className="flex items-center text-sm text-[#B4B4B4]">
-                      <Icon className="w-4 h-4 text-[#FF4F00]" />
+                      <Icon className="w-4 h-4 text-[#E04500]" />
                       <span className="ml-2">{b}</span>
                     </li>
                   );
@@ -238,11 +238,11 @@ const Landing: React.FC<{ lang: Lang }> = ({ lang }) => {
               </ul>
               <div className="flex items-center space-x-3 mt-6">
                 <span className="flex items-center border border-[#333333] px-3 py-1 text-xs font-medium font-mono uppercase tracking-[0.12em]">
-                  <ShieldCheck className="w-4 h-4 mr-1 text-[#FF4F00]" />
+                  <ShieldCheck className="w-4 h-4 mr-1 text-[#E04500]" />
                   {lang === 'fr' ? 'Loi 96' : 'Bill 96'}
                 </span>
                 <span className="flex items-center border border-[#333333] px-3 py-1 text-xs font-medium font-mono uppercase tracking-[0.12em]">
-                  <ShieldCheck className="w-4 h-4 mr-1 text-[#FF4F00]" />
+                  <ShieldCheck className="w-4 h-4 mr-1 text-[#E04500]" />
                   {lang === 'fr' ? 'Loi 25' : 'Law 25'}
                 </span>
               </div>
@@ -272,7 +272,7 @@ const Landing: React.FC<{ lang: Lang }> = ({ lang }) => {
                 const Icon = painIcons[i];
                 return (
                   <div key={i} className="card-light p-6 flex items-start space-x-3">
-                    <Icon className="w-6 h-6 text-[#FF4F00] flex-shrink-0" />
+                    <Icon className="w-6 h-6 text-[#E04500] flex-shrink-0" />
                     <p className="text-[#B4B4B4]">
                       {item.pain} → <strong>{item.outcome}</strong>
                     </p>
@@ -303,7 +303,7 @@ const Landing: React.FC<{ lang: Lang }> = ({ lang }) => {
                 return (
                   <div key={i} className="card-light p-6 flex items-start space-x-3">
                     <div className="w-10 h-10 border border-[#333333] flex items-center justify-center flex-shrink-0">
-                      <Icon className="w-5 h-5 text-[#FF4F00]" />
+                      <Icon className="w-5 h-5 text-[#E04500]" />
                     </div>
                     <p className="font-semibold text-[#EAEAEA]">{step}</p>
                   </div>
@@ -323,14 +323,14 @@ const Landing: React.FC<{ lang: Lang }> = ({ lang }) => {
                     <>
                       Hors heures : « Merci pour votre message — nous vous rappelons demain 8\u00a0h\u00a030–9\u00a0h. Vous préférez réserver maintenant\u00a0? »
                       {leadResponseConfig.has_online_booking && (
-                        <a href="#" className="text-[#FF4F00] underline ml-1">Lien de réservation</a>
+                        <a href="#" className="text-[#2280FF] underline ml-1">Lien de réservation</a>
                       )}
                     </>
                   ) : (
                     <>
                       After hours: “Thanks for your message — we’ll call tomorrow 8:30–9:00. Prefer to book now?”
                       {leadResponseConfig.has_online_booking && (
-                        <a href="#" className="text-[#FF4F00] underline ml-1">Booking link</a>
+                        <a href="#" className="text-[#2280FF] underline ml-1">Booking link</a>
                       )}
                     </>
                   )}
@@ -349,7 +349,7 @@ const Landing: React.FC<{ lang: Lang }> = ({ lang }) => {
                 const Icon = statIcons[i];
                 return (
                   <div key={i} className="card-light p-6 flex items-center space-x-3">
-                    <Icon className="w-5 h-5 text-[#FF4F00]" />
+                    <Icon className="w-5 h-5 text-[#E04500]" />
                     <p className="font-medium text-[#B4B4B4]">{s}</p>
                   </div>
                 );
@@ -369,7 +369,7 @@ const Landing: React.FC<{ lang: Lang }> = ({ lang }) => {
         <section className="py-16 bg-[#0f0f0f]">
           <div className="max-w-3xl mx-auto px-6">
             <div className="card-light p-8 relative" data-spots="7">
-              <span className="absolute top-4 left-4 border border-[#333333] text-[#FF4F00] text-xs font-semibold px-3 py-1 font-mono uppercase tracking-[0.12em]">
+              <span className="absolute top-4 left-4 border border-[#333333] text-[#E04500] text-xs font-semibold px-3 py-1 font-mono uppercase tracking-[0.12em]">
                 {t.founders.badge}
               </span>
               <p className="mb-6 text-[#B4B4B4]" dangerouslySetInnerHTML={{ __html: t.founders.copy }} />
@@ -409,15 +409,15 @@ const Landing: React.FC<{ lang: Lang }> = ({ lang }) => {
             </div>
             <div className="flex justify-center space-x-6 mb-8 text-sm text-[#B4B4B4] font-mono uppercase tracking-[0.12em]">
               <div className="flex items-center">
-                <ShieldCheck className="w-5 h-5 mr-1 text-[#FF4F00]" />
+                <ShieldCheck className="w-5 h-5 mr-1 text-[#E04500]" />
                 {lang === 'fr' ? 'Loi 96' : 'Bill 96'}
               </div>
               <div className="flex items-center">
-                <ShieldCheck className="w-5 h-5 mr-1 text-[#FF4F00]" />
+                <ShieldCheck className="w-5 h-5 mr-1 text-[#E04500]" />
                 {lang === 'fr' ? 'Loi 25' : 'Law 25'}
               </div>
               <div className="flex items-center">
-                <Lock className="w-5 h-5 mr-1 text-[#FF4F00]" />
+                <Lock className="w-5 h-5 mr-1 text-[#E04500]" />
                 {lang === 'fr' ? 'Paiement s\u00e9curis\u00e9' : 'Secure payment'}
               </div>
             </div>

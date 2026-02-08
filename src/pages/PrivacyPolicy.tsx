@@ -22,7 +22,7 @@ const PrivacyPolicy = () => {
         <p className="mb-6 text-[0.9rem] md:text-base text-[#B4B4B4] leading-relaxed">
           <strong>Controller:</strong> Simon Paris (sole proprietor)<br />
           <strong>Address:</strong> 1234 Rue Exemple, Québec (QC) G1A 0A0<br />
-          <strong>Email:</strong> <a href="mailto:privacy@simonparis.ca" className="text-[#FF4F00] hover:underline">privacy@simonparis.ca</a>
+          <strong>Email:</strong> <a href="mailto:privacy@simonparis.ca" className="text-[#2280FF] hover:underline">privacy@simonparis.ca</a>
         </p>
 
         <h2 className="text-xl md:text-2xl font-semibold text-[#EAEAEA] mb-4 mt-8">2. Personal Data We Collect</h2>
@@ -68,7 +68,7 @@ const PrivacyPolicy = () => {
 
         <h2 className="text-xl md:text-2xl font-semibold text-[#EAEAEA] mb-4 mt-8">5. Your Rights</h2>
         <p className="mb-6 text-[0.9rem] md:text-base text-[#B4B4B4] leading-relaxed">
-          You may request to access, correct, or erase your data at any time. To exercise your rights, contact <a href="mailto:privacy@simonparis.ca" className="text-[#FF4F00] hover:underline">privacy@simonparis.ca</a>. You may also file a complaint with the Commission d’accès à l’information du Québec.
+          You may request to access, correct, or erase your data at any time. To exercise your rights, contact <a href="mailto:privacy@simonparis.ca" className="text-[#2280FF] hover:underline">privacy@simonparis.ca</a>. You may also file a complaint with the Commission d’accès à l’information du Québec.
         </p>
 
         <h2 className="text-xl md:text-2xl font-semibold text-[#EAEAEA] mb-4 mt-8">6. Cookies &amp; Tracking</h2>
