@@ -323,14 +323,24 @@ const Landing: React.FC<{ lang: Lang }> = ({ lang }) => {
                     <>
                       Hors heures : « Merci pour votre message — nous vous rappelons demain 8\u00a0h\u00a030–9\u00a0h. Vous préférez réserver maintenant\u00a0? »
                       {leadResponseConfig.has_online_booking && (
-                        <a href="#" className="text-[#2280FF] underline ml-1">Lien de réservation</a>
+                        <a
+                          href="#"
+                          className="ml-1 text-[#EAEAEA] underline underline-offset-4 decoration-[#333333] transition-colors hover:decoration-[#E04500]"
+                        >
+                          Lien de réservation
+                        </a>
                       )}
                     </>
                   ) : (
                     <>
                       After hours: “Thanks for your message — we’ll call tomorrow 8:30–9:00. Prefer to book now?”
                       {leadResponseConfig.has_online_booking && (
-                        <a href="#" className="text-[#2280FF] underline ml-1">Booking link</a>
+                        <a
+                          href="#"
+                          className="ml-1 text-[#EAEAEA] underline underline-offset-4 decoration-[#333333] transition-colors hover:decoration-[#E04500]"
+                        >
+                          Booking link
+                        </a>
                       )}
                     </>
                   )}

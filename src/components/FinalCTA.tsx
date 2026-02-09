@@ -48,7 +48,10 @@ const FinalCTA: React.FC = () => {
         <div className="mt-16 flex flex-col items-center gap-2 text-sm text-[#B4B4B4] sm:flex-row sm:justify-between">
           <span className="text-center sm:text-left">© 2025 Simon Paris</span>
           <div className="flex flex-col items-center gap-3 sm:flex-row sm:gap-6">
-            <a href="/privacy" className="text-[#2280FF] transition hover:underline">
+            <a
+              href="/privacy"
+              className="text-[#EAEAEA] underline underline-offset-4 decoration-[#333333] transition-colors hover:decoration-[#E04500]"
+            >
               {privacyLabel}
             </a>
             <div className="flex items-center gap-2 text-[#B4B4B4] font-mono">
