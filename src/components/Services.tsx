@@ -68,18 +68,18 @@ const Services = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="relative py-20 overflow-hidden" style={{ background: '#121C2D' }}>
+    <section ref={sectionRef} className="relative py-20 overflow-hidden" style={{ background: '#0F0F0F' }}>
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
         <div className={`text-center mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="inline-flex items-center card-glass rounded-full px-4 py-2 mb-6">
-            <Award className="w-4 h-4 mr-2 text-[#2280FF]" />
-            <span className="text-sm font-medium text-white">Premium Automation Suite</span>
+            <Award className="w-4 h-4 mr-2 text-[#E04500]" />
+            <span className="text-sm font-medium text-[#EAEAEA]">Premium Automation Suite</span>
           </div>
-          <h2 className="text-display text-white mb-6">
+          <h2 className="text-display text-[#EAEAEA] mb-6">
             Automations that 
-            <span className="text-teal-400"> Pay for Themselves</span>
+            <span className="text-[#E04500]"> Pay for Themselves</span>
           </h2>
-          <p className="text-subhead max-w-3xl mx-auto text-gray-300">
+          <p className="text-subhead max-w-3xl mx-auto text-[#B4B4B4]">
             Transform your business operations with intelligent automation that works 24/7, 
             speaks both languages, and keeps you compliant.
           </p>
@@ -94,22 +94,22 @@ const Services = () => {
               }`}
               style={{ transitionDelay: isVisible ? '0ms' : `${index * 150}ms` }}
             >
-              <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 bg-teal-400">
-                <service.icon className="w-8 h-8 text-white" />
+              <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 bg-[#E04500]">
+                <service.icon className="w-8 h-8 text-[#0F0F0F]" />
               </div>
               
-              <h3 className="text-lg font-semibold text-white mb-3">
+              <h3 className="text-lg font-semibold text-[#EAEAEA] mb-3">
                 {service.title}
               </h3>
               
-              <p className="text-gray-300 mb-4 leading-relaxed text-sm">
+              <p className="text-[#B4B4B4] mb-4 leading-relaxed text-sm">
                 {service.description}
               </p>
               
               <ul className="space-y-2">
                 {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center text-sm text-gray-400">
-                    <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0 text-[#2280FF]" />
+                  <li key={featureIndex} className="flex items-center text-sm text-[#777777]">
+                    <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0 text-[#E04500]" />
                     {feature}
                   </li>
                 ))}
@@ -121,20 +121,20 @@ const Services = () => {
         <div className={`transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="card-dark p-12 relative overflow-hidden">
             <div className="relative z-10">
-              <h3 className="text-2xl lg:text-3xl font-bold text-white text-center mb-12">
+              <h3 className="text-2xl lg:text-3xl font-bold text-[#EAEAEA] text-center mb-12">
                 Why Work With Simon Paris?
               </h3>
               
               <div className="grid md:grid-cols-3 gap-8">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="text-center group">
-                    <div className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 bg-teal-400">
-                      <benefit.icon className="w-10 h-10 text-white" />
+                    <div className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 bg-[#E04500]">
+                      <benefit.icon className="w-10 h-10 text-[#0F0F0F]" />
                     </div>
-                    <h4 className="text-xl font-semibold text-white mb-3">
+                    <h4 className="text-xl font-semibold text-[#EAEAEA] mb-3">
                       {benefit.title}
                     </h4>
-                    <p className="text-gray-300 leading-relaxed">
+                    <p className="text-[#B4B4B4] leading-relaxed">
                       {benefit.description}
                     </p>
                   </div>
@@ -145,12 +145,8 @@ const Services = () => {
                 <button className="btn-primary px-10 py-4">
                   Start Your Automation Journey
                 </button>
-                
-                    <div className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 bg-[#2280FF]">
-                    </div>
-                
-                
-                <p className="text-gray-300 mt-6 max-w-2xl mx-auto leading-relaxed">
+
+                <p className="text-[#B4B4B4] mt-6 max-w-2xl mx-auto leading-relaxed">
                   I'm not just solving today's admin headaches—I'm helping Québec businesses get ready for the next wave of AI-driven growth.
                 </p>
               </div>

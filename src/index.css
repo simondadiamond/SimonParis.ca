@@ -6,7 +6,7 @@
 
 @layer utilities {
   .accent {
-    @apply text-[#FF4F00] font-semibold;
+    @apply text-[#E04500] font-semibold;
   }
   .font-inter {
     font-family: 'Inter', sans-serif;
@@ -33,10 +33,15 @@
 
 :root {
   --lab-black: #0f0f0f;
+  --lab-surface: #1A1A1A;
+  --lab-elevated: #1F1F1F;
   --lab-border: #333333;
   --lab-text: #EAEAEA;
   --lab-muted: #B4B4B4;
-  --lab-accent: #FF4F00;
+  --lab-accent: #E04500;
+  --lab-accent-hover: #FF5A1A;
+  --lab-link: #2280FF;
+  --lab-error: #F85149;
 }
 
 * {
@@ -190,8 +195,8 @@ mark {
 }
 
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(17, 230, 176, 0.3); }
-  50% { box-shadow: 0 0 30px rgba(17, 230, 176, 0.5); }
+  0%, 100% { box-shadow: 0 0 20px rgba(224, 69, 0, 0.3); }
+  50% { box-shadow: 0 0 30px rgba(224, 69, 0, 0.5); }
 }
 
 @keyframes mini-audit-fade-in {
@@ -291,7 +296,7 @@ mark {
 }
 
 .btn-primary--audit:hover {
-  background: #ff6b2b;
+  background: var(--lab-accent-hover);
 }
 
 .btn-primary--audit:focus-visible {
@@ -345,7 +350,7 @@ mark {
 }
 
 .btn-primary:hover {
-  background-color: #ff6b2b;
+  background-color: var(--lab-accent-hover);
 }
 
 .btn-primary:focus-visible {

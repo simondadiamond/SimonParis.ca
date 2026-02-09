@@ -1,1 +1,1 @@
-export const THEME_TEAL = '#139E9C';
+export const THEME_TEAL = '#E04500';

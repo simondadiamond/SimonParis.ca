@@ -49,22 +49,22 @@ export const Navbar: React.FC<{
       window.location.href = href;
     };
 
-    const isLight = textClass.includes('#121C2D');
+    const isLight = textClass.includes('#0F0F0F');
     const isMobile = tone === 'mobile';
     const activeClass = isMobile
       ? 'text-[#EAEAEA]'
       : isLight
-      ? 'text-[#121C2D]'
+      ? 'text-[#0F0F0F]'
       : 'text-[#EAEAEA]';
     const inactiveClass = isMobile
       ? 'text-[#B4B4B4]'
       : isLight
-      ? 'text-[#121C2D]/55'
+      ? 'text-[#0F0F0F]/55'
       : 'text-[#B4B4B4]';
     const dividerClass = isMobile
       ? 'text-[#333333]'
       : isLight
-      ? 'text-[#121C2D]/35'
+      ? 'text-[#0F0F0F]/35'
       : 'text-[#333333]';
 
     const wrapperClass =
@@ -79,7 +79,7 @@ export const Navbar: React.FC<{
       <button
         type="button"
         onClick={toggleLanguage}
-        className={`${wrapperClass} transition-colors hover:text-[#FF4F00] focus:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF4F00]`}
+        className={`${wrapperClass} transition-colors hover:text-[#FF5A1A] focus:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E04500]`}
         aria-label={label}
       >
         <span className={lang === 'fr' ? activeClass : inactiveClass}>FR</span>
@@ -181,7 +181,7 @@ export const Footer: React.FC<{ langToggle?: { fr: string; en: string } }> = ({
           <div className="flex flex-col items-center gap-3 sm:flex-row sm:gap-6">
             <a
               href={lang === 'fr' ? '/fr/politique-confidentialite' : '/privacy'}
-              className="text-sm text-[#B4B4B4] transition hover:text-[#FF4F00]"
+              className="text-sm text-[#B4B4B4] transition hover:text-[#FF5A1A]"
             >
               {t.footer.links.privacy}
             </a>
@@ -189,7 +189,7 @@ export const Footer: React.FC<{ langToggle?: { fr: string; en: string } }> = ({
             <button
               type="button"
               onClick={toggleFooterLanguage}
-              className="flex items-center text-sm font-semibold tracking-[0.25em] text-[#B4B4B4] transition hover:text-[#FF4F00] focus:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF4F00] font-mono"
+              className="flex items-center text-sm font-semibold tracking-[0.25em] text-[#B4B4B4] transition hover:text-[#FF5A1A] focus:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E04500] font-mono"
               aria-label={footerLabel}
             >
               <span className={lang === 'fr' ? 'text-[#EAEAEA]' : 'text-[#B4B4B4]'}>FR</span>

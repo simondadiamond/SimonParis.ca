@@ -54,7 +54,7 @@ const NewsletterConfirmation: React.FC = () => {
         <div className="w-full max-w-[540px] border border-[#333333] p-10 sm:p-12">
           <h1 className="section-heading text-[#EAEAEA] text-balance">{copy.title}</h1>
           <p className="mt-4 text-base leading-relaxed text-[#B4B4B4]">{copy.body}</p>
-          <p className="mt-6 text-sm font-medium text-[#FF4F00]">{copy.extra}</p>
+          <p className="mt-6 text-sm font-medium text-[#E04500]">{copy.extra}</p>
           <a href={copy.backHome.href} className="btn-primary mt-10 inline-flex w-full justify-center sm:w-auto">
             {copy.backHome.label}
           </a>
